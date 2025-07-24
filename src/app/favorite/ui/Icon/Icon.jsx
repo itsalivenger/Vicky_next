@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdFavoriteBorder, MdClose, MdShoppingCart } from 'react-icons/md';
+import { MdFavoriteBorder, MdClose, MdShoppingCart, MdExitToApp } from 'react-icons/md';
 
 export function Icon({ name, className = '', onClick = () => {} }) {
   switch (name) {
@@ -9,6 +9,8 @@ export function Icon({ name, className = '', onClick = () => {} }) {
       return <MdClose size={24} className={className} />;
     case 'shopping_cart':
       return <MdShoppingCart size={24} className={className} />;
+    case 'exit_to_app':
+      return <MdExitToApp size={24} className={className} />;
     default:
       return (
         <span onClick={onClick} className={`material-symbols-outlined ${className}`}>

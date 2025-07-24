@@ -131,7 +131,7 @@ const ProductManagement = () => {
                     {foundProducts.map((product) => (
                         <tr key={product._id}>
                             <td>
-                                <LazyMedia type="image" src={product.imageUrls[0]} alt={product.name} className={styles.productImage} width={50} height={50} unoptimized={true} />
+                                <LazyMedia type="image" src={product.imageUrls[0]} alt={product.name} className={styles.productImage} />
                             </td>
                             <td>{product.productName.slice(0, maxLength) + '...'}</td>
                             <td>{product.SKU.slice(0, maxLength) + '...'}</td>

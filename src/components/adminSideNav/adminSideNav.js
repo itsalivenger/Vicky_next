@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import styles from './adminSideNav.module.css';
 import DashboardAdmin from '../dashboardAdmin/dashboardAdmin';
 import ProductManagement from '../ProductManagement/ProductManagement';
-import OrdersAdmin from '../../app/OrdersAdmin/page';
+import OrdersAdmin from '../../app/ordersAdmin/page';
 import AddProductForm from '../addProductForm/addProductForm';
 import NewsletterDashboard from '../NewsletterDashboard/NewsletterDashboard';
 import LazyMedia from '../lazyMedia/LazyMedia';

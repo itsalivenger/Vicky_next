@@ -1,12 +1,35 @@
+"use client";
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '../../components/auth/AuthContext';
 import styles from './OrdersAdmin.module.css';
 import sendRequest from '../../components/other/sendRequest';
 import { serverDomain } from '../../components/other/variables';
 import { getTotal } from '../../components/other/usefulFunctions';
 import Popup from '../../components/popup/popup';
 import { OrderDetails } from '../../components/OrderDetails/OrderDetails';
+import LoadingSpinner from '../../components/LoadingSpinner/loadingSpinner';
 
 function OrdersAdmin() {
+    const { isAuthenticated, isAdmin, isLoading } = useAuth();
+    const router = useRouter();
+
+    useEffect(() => {
+        if (isLoading) {
+            return; // Wait for authentication status to be determined
+        }
+
+        if (!isAuthenticated) {
+            router.push('/login');
+        } else if (!isAdmin) {
+            router.push('/'); // Redirect to home or a non-admin page
+        }
+    }, [isAuthenticated, isAdmin, isLoading, router]);
+
+    if (isLoading || !isAuthenticated || !isAdmin) {
+        return null; // Or a loading spinner/message while redirecting
+    }
+
     const [orders, setOrders] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [searchBy, setSearchBy] = useState('email');

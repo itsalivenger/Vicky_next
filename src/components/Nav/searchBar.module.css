@@ -52,6 +52,10 @@
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-2px); /* Adjust as needed */
 }
 
 .icons:hover {

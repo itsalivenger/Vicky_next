@@ -28,9 +28,10 @@ export function ProfileCard({ user, handleLogout }) {
                 </div>
             </div>
 
-            <div className={styles.buttonsContainer}>
-                <Button onClick={handleLogout} className={styles.logoutBtn} style={{ backgroundColor: 'var(--color-gray)', color: 'white' }}>
-                    <Icon name="logout" className="mr-2" />
+            <div className={styles.buttonsContainer} onClick={handleLogout} >
+                <Button className={styles.logoutBtn} style={{ backgroundColor: 'var(--color-gray)', color: 'white' }}>
+                    <Icon name="exit_to_app" className="mr-2" />
+                    &nbsp;
                     Déconnexion
                 </Button>
             </div>

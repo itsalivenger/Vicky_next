@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './searchBar.module.css';
 import LazyMedia from '../lazyMedia/LazyMedia';
+import { AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
 
 const SearchBar = ({ toggleSearchInput, isActive, handleSubmit }) => {
     const [searchVal, setSearchVal] = useState('');
@@ -60,7 +61,7 @@ const SearchBar = ({ toggleSearchInput, isActive, handleSubmit }) => {
             <div className={`${styles.searchBarContainer} ${isActive ? styles.active : ''}`}>
                 <div className={styles.searchBar}>
                     <div onClick={handleClose} className={`${styles['closeIcon']} ${styles.icons}`}>
-                        <i className="material-symbols-outlined">close</i>
+                        <AiOutlineClose />
                     </div>
                     <input
                         type="text"
@@ -70,7 +71,7 @@ const SearchBar = ({ toggleSearchInput, isActive, handleSubmit }) => {
                         value={searchVal}
                     />
                     <div onClick={handleSearch} className={`${styles['searchIcon']} ${styles.icons}`}>
-                        <i className="material-symbols-outlined">search</i>
+                        <AiOutlineSearch />
                     </div>
                 </div>
             </div>

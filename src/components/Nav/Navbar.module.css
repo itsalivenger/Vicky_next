@@ -2,7 +2,7 @@
     /* background-color: #1b1b1a; */
     border-radius: 40px;
     border: 1px solid rgb(200, 200, 200, 0.1);
-    padding: 15px 30px;
+    padding: 25px 50px; /* Increased padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,7 +49,7 @@
 .navbar-icons i {
     color: var(--color-green);
     text-decoration: none;
-    font-size: 17px; /* was 14px */
+    font-size: 18px; /* Increased font size */
     font-weight: 500; /* was 400 */
     letter-spacing: 0.5px;
     transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), color 0.2s;
@@ -114,7 +114,7 @@
 .navbar-icons i {
     color: var(--color-green);
     font-weight: lighter;
-    font-size: 26px;
+    font-size: 36px; /* Further increased font size */
     cursor: pointer;
 }
 
