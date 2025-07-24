@@ -1,0 +1,26 @@
+.summary {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.total {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.totalAmount {
+  color: rgb(0, 228, 137);
+  font-weight: 600;
+  font-size: 1.25rem;
+}

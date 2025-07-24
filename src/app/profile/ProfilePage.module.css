@@ -1,0 +1,29 @@
+.container {
+  margin-top: 2em;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--color-black);
+
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 300px 1fr;
+  }
+}

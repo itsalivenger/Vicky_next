@@ -1,0 +1,140 @@
+.cart-container {
+    padding: 100px 0px;
+}
+
+.nextButton-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px;
+    gap: 1em;
+}
+
+.next-button {
+    padding: 10px 20px;
+    background-color: var(--color-green);
+    color: #f0f0f0;
+    border: 1px solid var(--color-green);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: var(--color-greenHover);
+    color: #1e1e1e;
+}
+
+.previous-button {
+    padding: 10px 20px;
+    background-color: rgb(64, 64, 64);
+    color: #fff;
+    border: 1px solid rgb(64, 64, 64);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.previous-button:hover {
+    background-color: var(--color-green);
+    color: #f0f0f0;
+}
+
+.container-of-all {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 1000px;
+    margin: 50px;
+    border-radius: 30px;
+    border: 1px solid rgb(64, 64, 64);
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    color: rgb(216, 216, 216);
+    background-color: rgb(34, 34, 34);
+}
+
+.secure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secure-order {
+    display: flex;
+    align-items: center;
+}
+
+.timelines_Container span {
+    margin: 0;
+}
+
+.timelines_Container{
+    display: flex;
+    gap: .5em;
+}
+
+.secure-order-title {
+    font-size: 25px;
+    color: var(--color-green);
+}
+
+.vertical-line {
+    height: 30px;
+    width: 1px;
+    background-color: rgb(120, 120, 120);
+    margin: 0px 20px;
+}
+
+.horizontal-line {
+    background-color: rgb(100, 100, 100);
+    height: 1px;
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.secure-order-sub-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.order-timeline {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.order-timeline-info {
+    margin: 0px 10px;
+}
+
+.order-timeline-number {
+    background-color: rgb(120, 120, 120);
+    padding: 1px 5px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.active {
+    background-color: var(--color-green);
+}
+
+@media only screen and (max-width: 900px) {
+    .container-of-all {
+        width: 100%;
+        align-items: center;
+    }
+
+    .secure {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .order-timeline {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+}

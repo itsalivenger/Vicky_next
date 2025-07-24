@@ -1,0 +1,197 @@
+/* Carousel styles */
+
+.carouselContainer {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+/* Arrows styles */
+.arrow {
+  cursor: pointer;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform 0.1s;
+  width: 40px;
+  z-index: 1;
+}
+
+.arrow-top,
+.arrow-bottom {
+  background-color: #666;
+  height: 4px;
+  left: -5px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.arrow-top:after,
+.arrow-bottom:after {
+  background-color: #fff;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.15s;
+}
+
+.arrow-top {
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+.arrow-top:after {
+  left: 100%;
+  right: 0;
+  transition-delay: 0s;
+}
+
+.arrow-bottom {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+
+.arrow-bottom:after {
+  left: 0;
+  right: 100%;
+  transition-delay: 0.15s;
+}
+
+.arrow:hover .arrow-top:after {
+  left: 0;
+  transition-delay: 0.15s;
+}
+
+.arrow:hover .arrow-bottom:after {
+  right: 0;
+  transition-delay: 0s;
+}
+
+.left {
+  transform: rotate(-180deg) translate(-50%, 50%);
+  left: 0;
+}
+
+.right{
+  right: 0;
+}
+
+
+
+/* Carousel Dots styles */
+
+/* Dots container */
+.customDots {
+  position: absolute;
+  bottom: 0px !important;
+  display: flex !important;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual dot container */
+.customDots li {
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Custom dot */
+.customDot {
+  width: 30px;
+  height: 4px;
+  background-color: #666;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.customDots :global(.slick-active) .customDot {
+  background-color: rgba(255, 255, 255, 1); /* Highlight active dot */
+}
+
+
+
+/* Slide styles */
+
+.contentBlock {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  padding: 20px;
+  max-width: 600px;
+  /* Optional overlay for readability */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #fff;
+  border: #fff solid 1px;
+  background-color: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.button:hover {
+  color: #111;
+  border: var(--color-greenHover) solid 1px;
+  background-color: var(--color-greenHover);;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+}

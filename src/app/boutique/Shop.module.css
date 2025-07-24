@@ -1,0 +1,121 @@
+.container {
+    padding: 15px 0 10px 0;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.titleContainer {
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.loadMoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.loadMore {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #757575;
+    background-color: transparent;
+    border: none;
+    /* Gray text */
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+.loadMore:hover {
+    span {
+        animation: spin 1.2s linear infinite;
+    }
+}
+
+.noProducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(49, 49, 49, 0.251);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .noProducts::before {
+    content: "⚠️";
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite alternate;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  
+  
+
+/* Spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.productContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    /* Space between the cards */
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .productContainer {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productContainer {
+        grid-template-columns: 1fr;
+        /* Stacks cards on smaller screens */
+        gap: 10px;
+    }
+    .titleContainer{
+        padding: .5em;
+    }
+}

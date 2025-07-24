@@ -1,0 +1,221 @@
+.admin-dashboard {
+    padding: 150px 0;
+}
+
+.nav-tabs {
+    background-color: rgb(255, 255, 255, .1);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tab-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.tab-button.active {
+    background-color: rgb(0, 228, 137);
+    color: white;
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #f1f1f1;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Dashboard Cards */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: rgb(255, 255, 255, .1);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.card .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(0, 228, 137);
+}
+
+/* Product Management */
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.add-product {
+    background-color: rgb(0, 228, 137);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: white;
+    gap: 1rem;
+}
+
+.searchContainer input {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255, .1);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.searchContainer button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(1, 124, 75);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.tab-content th,
+.tab-content td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tab-content th {
+    font-weight: 600;
+    background-color: rgb(255, 255, 255, .1);
+    color: rgb(0, 228, 137);
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+/* Essentials */
+.essentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.quick-actions button {
+    width: 100%;
+    padding: 0.75rem;
+    text-align: left;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.quick-actions button:hover {
+    background-color: #f1f1f1;
+}
+
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.status-item:last-child {
+    border-bottom: none;
+}
+
+.status-online {
+    color: rgb(0, 228, 137);
+}
+
+@media screen and (max-width: 600px) {
+    .tab-container {
+        flex-direction: column;
+        gap: .5em;
+        width: 85%;
+    }
+
+    .searchContainer {
+        flex-direction: column;
+        gap: .5em;
+    }
+
+
+    .tab-content table {
+        border: none;
+    }
+
+    .tab-content th,
+    .tab-content td {
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+    }
+}

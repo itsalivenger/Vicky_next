@@ -1,0 +1,237 @@
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  border-radius: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 12;
+  cursor: pointer;
+  transition: color 0.2s, box-shadow 0.25s, transform 0.2s;
+  font-size: 1.3em;
+  box-shadow: none;
+}
+
+.arrowBtn:hover, .arrowBtn:focus {
+  color: var(--color-green, #1db954);
+  outline: none;
+  box-shadow: none;
+  transform: translateY(-50%) scale(1.18);
+}
+
+.arrowBtn .fa-chevron-left,
+.arrowBtn .fa-chevron-right,
+.arrowBtn svg {
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+.arrowBtn.leftArrow:hover .fa-chevron-left,
+.arrowBtn.leftArrow:focus .fa-chevron-left,
+.arrowBtn.leftArrow:hover svg,
+.arrowBtn.leftArrow:focus svg {
+  transform: none;
+}
+
+.arrowBtn.rightArrow:hover .fa-chevron-right,
+.arrowBtn.rightArrow:focus .fa-chevron-right,
+.arrowBtn.rightArrow:hover svg,
+.arrowBtn.rightArrow:focus svg {
+  transform: none;
+}
+
+.leftArrow {
+  left: -2.2em;
+}
+
+.rightArrow {
+  right: -2.2em;
+}
+
+@media (max-width: 900px) {
+  .leftArrow {
+    left: -1em;
+  }
+  .rightArrow {
+    right: -1em;
+  }
+  .arrowBtn {
+    width: 22px;
+    height: 22px;
+    font-size: 0.95em;
+  }
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: visible;
+}
+
+.swiper {
+  /* height: 170px; */
+}
+
+.slick-slider {
+  position: relative;
+}
+
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 120px;
+  padding: 24px 18px;
+  width: 100%;
+  margin: 0 20px; /* Increased margin for more space */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 18px;
+}
+
+.slick-arrow {
+  z-index: 2;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-list {
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  min-height: 220px; /* Increased height to accommodate scaled categories */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    /* background-color: black; */
+    padding: 2em 0 4em 0;
+  }
+  
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 170px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    padding: 20px; /* Add padding to create space for scaling */
+    margin: -20px; /* Negative margin to offset padding and maintain layout */
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .category:hover {
+    transform: scale(1.2);
+    z-index: 10; /* Bring to front on hover */
+    position: relative; /* Needed for z-index to work */
+  }
+  
+  .slick-slide {
+  position: relative;
+}
+  
+  .category:active {
+    transform: scale(1.2);
+  }
+  
+  .active {
+    transform: scale(1.2);
+  
+    .icon {
+      background-color: var(--color-green);
+    }
+  }
+  
+  .name {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    word-break: break-word;
+    max-width: 90px;
+    line-height: 1.2;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    overflow: visible;
+    white-space: normal;
+    display: block;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .category {
+      margin: 10px;
+      width: 90px;
+      height: 110px;
+    }
+    
+    .name {
+      font-size: 13px;
+      max-width: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .category {
+      width: 80px;
+      height: 100px;
+    }
+    
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .name {
+      font-size: 12px;
+      max-width: 70px;
+    }
+  }
+
+.category:hover .icon, .category:focus .icon {
+  box-shadow: 0 0 16px 3px rgba(29, 185, 84, 0.6);
+  transform: scale(1.13);
+  border-color: var(--color-green, #1db954);
+  }

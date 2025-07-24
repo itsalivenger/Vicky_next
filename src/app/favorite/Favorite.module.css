@@ -1,0 +1,124 @@
+
+.favorite-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    padding: 150px 50px;
+    color: rgb(216, 216, 216);
+    background-color: rgb(34, 34, 34);
+}
+
+.favorite-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(0, 228, 137);
+}
+
+.favorite-items-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    margin: 50px 0px;
+}
+
+.favorite-item {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.1s;
+}
+
+.favorite-item:hover {
+    transform: scale(1.1);
+}
+
+.favorite-item-image {
+    width: 250px;
+    border-radius: 20px;
+}
+
+.favorite-text-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.favorite-text-content, .favorite-icon-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.favorite-sub-title {
+    font-size: 15px;
+    color: white;
+}
+
+.favorite-description {
+    font-size: 13px;
+    color: rgb(120, 120, 120);
+}
+
+.favorite-icon {
+    color: rgb(0, 228, 137);
+}
+
+.favorite-price {
+    font-size: 15px;
+}
+
+.stars-container {
+    user-select: none;
+}
+
+.star-icon {
+    cursor: pointer;
+}
+
+.star-icon:hover {color: rgb(255,226,52);}
+
+.favorite-rarety {
+    font-size: 11px;
+    color: rgb(0, 228, 137);
+}
+
+.favorite-add-to-cart {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    background: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.favorite-add-to-cart:hover {
+    background-color: white;
+    color: black;
+}
+
+.load-more {
+    width: 30%;
+    align-self: center;
+    background-color: rgb(0, 228, 137);
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 15px 0px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.load-more:hover {
+    background-color: rgb(0, 114, 68);
+}
+
+@media only screen and (max-width: 600px) {
+    .load-more {width: 80%;}
+}

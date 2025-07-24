@@ -1,0 +1,73 @@
+.toggleSwitch {
+    position: relative;
+    width: 64px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .toggleSwitch:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .light{
+    background: rgba(123, 123, 123, 0.425);
+  }
+
+  .light:hover{
+    background: rgba(128, 125, 125, 0.68);
+  }
+  
+  .slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 28px;
+    height: 28px;
+    background: var(--color-green);
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slider.dark {
+    transform: translateX(32px);
+  }
+  
+  .icon {
+    font-size: 16px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  .slider:hover .icon {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .toggleSwitch {
+      width: 56px;
+      height: 28px;
+    }
+    
+    .slider {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .slider.dark {
+      transform: translateX(28px);
+    }
+    
+    .icon {
+      font-size: 14px;
+    }
+  }

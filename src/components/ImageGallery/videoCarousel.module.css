@@ -1,0 +1,22 @@
+.carousel-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .video-wrapper {
+    padding: 10px; /* Adds spacing between videos */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+  }
+  
+  .slick-slide {
+    margin: 0;
+  }
+  

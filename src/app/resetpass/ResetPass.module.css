@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: rgb(26, 26, 26); */
+    padding: 50px 0;
+}
+
+.pseudo-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(26, 26, 26); */
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(32, 32, 32);
+    padding: 40px 20px;
+    border-radius: 30px;
+    width: 600px;
+    height: fit-content;
+    text-align: center;
+    border: 1px solid rgb(50, 50, 50);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.input-container label {
+    color: rgb(210, 210, 210);
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.form-container h1 {
+    font-size: 1.2rem;
+    color: rgb(210, 210, 210);
+    letter-spacing: 1px;
+}
+
+.form-container p {
+    font-size: 0.8rem;
+    color: rgb(190, 190, 190);
+}
+
+.form-container hr {
+    margin: 5px 0px 40px 0px;
+    border: none;
+    height: 2px;
+    width: 90%;
+    background-color: rgb(50, 50, 50);
+}
+
+.input-container input {
+    padding: 15px 25px;
+    background: rgb(26, 26, 26);
+    color: #fff;
+    border: 1px solid var(--color-green);
+    border-radius: 15px;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border 0.3s ease-in-out;
+}
+
+.input-container input:focus {
+    border-color: var(--color-green);
+    outline: 1px solid var(--color-green);
+}
+
+.reset-btn {
+    width: 90%;
+    padding: 20px 0px;
+    background-color: var(--color-green);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 30px 0px 20px 0px;
+}
+
+.reset-btn:hover {
+    background-color: var(--color-greenHover);
+}
+
+.resend-div {
+    color: rgb(210, 210, 210);
+    font-size: 0.8rem;
+}
+
+.resend {
+    color: var(--color-green);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .form-container {
+        width: 80%;
+    }
+}

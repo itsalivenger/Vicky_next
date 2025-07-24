@@ -1,0 +1,38 @@
+.iconContainer {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.icon {
+    font-size: 24px;
+    /* Couleur par défaut */
+    cursor: pointer;
+    /* Changement de curseur survol */
+    transition: transform 0.3s ease;
+    width: 30px;
+    height: 30px;
+    img{
+        width: 100%;
+    }
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.iconBg {
+  background: #222;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.iconBg:hover {
+  background: #444;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+}

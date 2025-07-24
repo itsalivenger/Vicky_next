@@ -1,0 +1,42 @@
+.viewAllButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .viewAllButton:hover {
+    background-color: #222;
+    transform: scale(1.05);
+  }
+  
+  .text {
+    margin-right: 10px;
+  }
+  
+  .arrow {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .viewAllButton:hover .arrow {
+    transform: translateX(5px);
+  }
+  
+
+@media screen and (max-width: 700px) {
+    .viewAllButton {
+        justify-content: right;
+    }
+    
+}

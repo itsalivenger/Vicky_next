@@ -1,0 +1,29 @@
+.carouselContainer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carouselItem {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.carouselImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Rounded corners */
+  object-fit: cover;
+}
+
+/* Slick dots styling (optional customization) */
+.slick-dots li button:before {
+  color: white; /* Change dot color */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007bff; /* Change active dot color */
+}

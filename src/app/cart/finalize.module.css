@@ -1,0 +1,267 @@
+.container-of-all {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 1000px;
+    margin: 50px;
+    border-radius: 30px;
+    border: 1px solid rgb(64, 64, 64);
+    padding: 30px;
+    color: rgb(216, 216, 216);
+    background-color: rgb(34, 34, 34);
+}
+
+.order-summary {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.order-summary h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.order-summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.order-summary-item-label {
+    font-weight: bold;
+}
+
+.order-summary-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+
+.delivery-info {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.delivery-info h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.labelAdress {
+    font-weight: bold;
+}
+
+.finalize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.finalize-title,
+.delivery-info-information-title,
+.confirmation-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-green);
+    margin-bottom: 10px;
+}
+
+.finalize-sub-title {
+    font-size: 20px;
+    color: rgb(120, 120, 120);
+}
+
+.finalize-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 50px 0px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.finalize-table th,
+.finalize-table td {
+    padding: 12px;
+    border: 2px solid rgb(1, 66, 40);
+    color: white;
+}
+
+.finalize-table th {
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+.finalize-table tr:hover {
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.delivery-info-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.delivery-info-information-title {
+    margin-bottom: 50px;
+}
+
+.delivery-info {
+    font-size: 20px;
+    color: white;
+}
+
+.payment-method-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.check-container {
+    display: flex;
+    margin-top: 50px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.check-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between checkbox and text */
+    cursor: pointer;
+}
+
+.check-input {
+    appearance: none;
+    border: 2px solid var(--color-green);
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Add a custom checkmark when checked */
+.check-input:checked {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.check-input:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.condition-and-terms {
+    color: var(--color-green);
+    text-decoration: none;
+}
+
+.confirmation-button {
+    color: white;
+    background-color: var(--color-green);
+    border-radius: 20px;
+    height: 50px;
+    width: 70%;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+.confirmation-button:hover {
+    background-color: rgb(1, 66, 40);
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    .container-of-all {
+        width: 90%;
+        align-items: center;
+    }
+
+    .secure {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .order-timeline {
+        margin-top: 20px;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .billing-container {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .coupon-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .billing-container {
+        padding: 0;
+        text-align: center;
+    }
+
+    .coupon-container {
+        padding: 0;
+    }
+
+    .billing-input {
+        font-size: 12px;
+    }
+
+    .billing-title,
+    .coupon-title {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+}

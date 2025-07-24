@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+  <!-- Material Icons - Direct load for reliability -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0">
+
+  <!-- Preload Playfair Display font -->
+  <link rel="preload" 
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+      rel="stylesheet">
+  </noscript>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="Heatz® | Protect & Power Your Mobile with Our Accessories" />
+  <meta property="og:description"
+    content="Wide range of premium mobile accessories, including cases, chargers, and headphones.." />
+  <meta property="og:image" content="https://i.imgur.com/Pwf7Gkg.png" />
+  <meta property="og:url" content="https://heatzheatz.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Heatz®" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Affordable, high-quality products designed to enhance your mobile experience." />
+  
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+  <!-- Ensure Material Icons are loaded -->
+  <script>
+    // Force Material Icons to load
+    if (!document.querySelector('link[href*="Material+Symbols+Outlined"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0';
+      document.head.appendChild(link);
+    }
+  </script>
+
+  <title>Heatz® Mobile Accessories</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+</html>

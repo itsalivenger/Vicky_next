@@ -1,0 +1,11 @@
+.admin-page{
+    display: flex;
+    box-sizing: border-box;
+    gap: .5em;
+}
+
+.admin-page-content{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(34, 34, 34);
+}

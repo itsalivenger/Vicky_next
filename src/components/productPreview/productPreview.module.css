@@ -1,0 +1,267 @@
+.pseudo-body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.model-span {
+    color: rgb(220, 220, 220);
+    align-self: flex-end;
+    font-size: 15px;
+}
+
+.container-of-all {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    margin-top: 5px;
+    display: flex;
+    color: rgb(220, 220, 220);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-one {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-right: 10px;
+}
+
+.big-overview-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.item-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.item-desciption {
+    font-size: 13px;
+    width: 90%;
+}
+
+.small-overview-image-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.small-overview-image-first-row,
+.small-overview-image-second-row {
+    display: flex;
+}
+
+.small-overview-image {
+    width: 245px;
+    height: 245px;
+    border-radius: 20px;
+}
+
+.first {
+    margin: 0px 10px 10px 0px;
+}
+
+.fourth {
+    margin: 0px 0px 0px 10px;
+}
+
+.varient-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.varient-image-container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: 5px 0px 10px 0px;
+}
+
+.varient-image {
+    opacity: 0.5;
+    width: 30px;
+    cursor: pointer;
+}
+
+.clicked {
+    opacity: 1;
+}
+
+.quantity-container {
+    display: flex;
+    gap: 0px;
+    margin-top: 5px;
+}
+
+.lower-quantity,
+.add-quantity {
+    font-size: 25px;
+    height: 45px;
+    width: 70px;
+    background: none;
+    border: 1px solid rgb(220, 220, 220);
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.lower-quantity {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.add-quantity {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.choose-varient,
+.quantity-span {
+    font-size: 15px;
+}
+
+.quantity-input {
+    width: 90px;
+    height: 45px;
+    background: none;
+    color: rgb(220, 220, 220);
+    outline: none;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.price-add {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-span {
+    font-size: 15px;
+    position: relative;
+    right: -55px;
+}
+
+.price-container {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 39px;
+}
+
+.new-price-span {
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.old-price-span {
+    font-size: 20px;
+    text-decoration: line-through;
+    color: rgb(100, 100, 100);
+}
+
+.add-to-cart {
+    height: 45px;
+    width: 230px;
+    background: none;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 30px;
+    color: rgb(220, 220, 220);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-one {
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container-of-all {
+        width: 90%;
+    }
+
+    .container-one {
+        width: 100%;
+    }
+
+    .container-two {
+        width: 100%;
+    }
+
+    .small-overview-image-container {
+        width: 100%;
+    }
+
+    .small-overview-image {
+        width: calc(50% - 5px);
+        height: calc(50% - 5px);
+    }
+
+    .varient-quantity {
+        width: 45%;
+    }
+
+    .price-add {
+        width: 45%;
+    }
+
+    .add-to-cart {
+        width: 100%;
+    }
+
+    .price-container {
+        align-self: flex-start;
+    }
+
+    .price-span {
+        right: 0px;
+    }
+
+    .lower-quantity {
+        width: 25%;
+    }
+
+    .quantity-input {
+        width: 50%;
+    }
+
+    .add-quantity {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .new-price-span {
+        font-size: 20px;
+    }
+
+    .old-price-span {
+        font-size: 15;
+    }
+}

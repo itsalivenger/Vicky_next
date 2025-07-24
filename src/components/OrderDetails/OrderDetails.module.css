@@ -1,0 +1,115 @@
+.container {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.orderDetails{
+  transition: transform 0.2s ease;
+}
+
+.orderDetails:hover{
+  transform: translateX(5px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.orderInfo {
+  color: white;
+}
+
+.orderId {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.title {
+  color: rgb(0, 228, 137);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.userInfo{
+  color: rgb(0, 228, 137);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.printBtnContainer{
+  display: flex;
+  padding: 1em;
+}
+
+.printOrderBtn{
+  margin-left: auto;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 228, 137, 0.459);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.printOrderBtn:hover {
+  background-color: rgba(0, 228, 137, 0.737);
+}
+
+.back {
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+
+  i {
+    transition: transform 0.3s ease;
+  }
+}
+
+.back:hover i {
+  transform: scale(1.2);
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.address {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(0, 228, 137);
+  font-weight: 500;
+}

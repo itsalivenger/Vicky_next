@@ -1,0 +1,110 @@
+/* userManagement.module.css */
+.container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255, 0.9); /* lighter gray for title */
+  }
+  
+  .controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .searchInput, .select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--color-gray); /* gray border */
+    border-radius: 4px;
+    width: 200px;
+    background-color: var(--color-gray); /* gray background for inputs */
+    color: rgb(255, 255, 255, 0.9); /* text color */
+  }
+  
+  .select {
+    width: 150px;
+  }
+  
+  .select option{
+    color: black;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-gray); /* gray border */
+  }
+  
+  .table tr:hover {
+    background-color: var(--color-gray); /* light green on hover */
+  }
+  
+  .active {
+    color: var(--color-green); /* green for active */
+  }
+  
+  .inactive {
+    color: rgb(255, 255, 255, 0.9); /* light gray for inactive */
+  }
+  
+  .buttons {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .toggleButton {
+    background-color: var(--color-green); /* green */
+    color: white;
+  }
+  
+  .deleteButton {
+    background-color: var(--color-gray); /* gray */
+    color: white;
+    border: 1px solid rgb(255, 255, 255, 0.2); /* light gray border */
+  }
+  
+  .toggleButton:hover {
+    background-color: var(--color-greenHover); /* darker green on hover */
+  }
+  
+  .deleteButton:hover {
+    background-color: rgb(255, 255, 255, 0.2); /* lighter gray on hover */
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .pagination button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid var(--color-gray); /* gray border */
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--color-gray); /* gray background */
+    color: rgb(255, 255, 255, 0.9); /* gray text */
+  }
+  
+  .pagination button:disabled {
+    background-color: rgb(255, 255, 255, 0.2); /* lighter gray when disabled */
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,345 @@
+.container {
+    padding: 100px 60px;
+    margin: 0 auto;
+}
+
+.container-of-all {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    margin-bottom: 4em;
+    perspective: 1000px;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.flip-btn{
+    background-color: rgb(26, 26, 26);
+    color: #fff;
+    border: 1px solid var(--color-green);
+    /* Green border */
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: border .3s ease-in-out;
+    cursor: pointer;
+}
+
+.flip-btn:hover{
+    border-color: var(--color-greenHover);
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden; /* Hides the back side when not visible */
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feel-free-container {
+    width: 60%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    /* min-height: 160vh; */
+}
+
+.send-us-email,
+.need-any-help {
+    font-size: 20px;
+    color: var(--color-green);
+}
+
+.feel-free-to-write,
+.get-in-touch-with-us {
+    font-size: 40px;
+    margin-bottom: 50px;
+    /* color: rgb(210, 210, 210); */
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin-bottom: 20px;
+}
+
+.info-input {
+    width: 50%;
+    padding: 15px 25px;
+    background: rgb(26, 26, 26);
+    color: #fff;
+    border: 1px solid var(--color-green);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.info-input:focus {
+    outline: 1px solid var(--color-green);
+}
+
+.message-input {
+    height: 150px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttonsContainer button {
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submitBtn {
+    background: var(--color-green);
+    color: #000;
+    border: none;
+    box-shadow: 0 0 10px var(--color-green),
+        0 0 20px rgba(0, 255, 157, 0.2),
+        0 0 30px rgba(0, 255, 157, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.submitBtn:hover {
+    background: var(--color-greenHover);
+    box-shadow: 0 0 20px var(--color-greenHover),
+        0 0 40px rgba(0, 255, 157, 0.2),
+        0 0 60px rgba(0, 255, 157, 0.1);
+    transform: translateY(-2px);
+}
+
+.submitBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 10px var(--color-greenHover);
+}
+
+/* Add pulsing animation */
+.submitBtn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(transparent,
+            rgba(0, 255, 157, 0.2),
+            transparent);
+    transform: rotate(45deg);
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(50%) translateY(50%) rotate(45deg);
+    }
+}
+
+/* Reset Button */
+.resetBtn {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 255, 242, 0.2);
+}
+
+.resetBtn:hover {
+    background: #2a2a2a;
+    box-shadow: 0 0 10px rgba(0, 255, 242, 0.2);
+}
+
+/* Individual Button */
+.flipButton {
+    background: #0f0f0f;
+    color: #ffffff;
+    border: 1px solid var(--color-green);
+    box-shadow: inset 0 0 10px #00ff9d25;
+}
+
+.flipButton:hover {
+    background: #1a1a1a;
+    border-color: var(--color-green);
+    box-shadow: inset 0 0 15px #00ff9d28;
+}
+
+.get-in-touch-container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.get-in-touch-with-us {
+    margin-bottom: 15px;
+}
+
+.get-in-touch-paragraph {
+    font-size: 15px;
+    /* color: rgb(150, 150, 150); */
+    width: 80%;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+    background-color: var(--color-green);
+    border-radius: 20px;
+    margin-right: 20px;
+    transition: background-color 0.3s ease-in-out;
+    padding: 15px;
+    color: white; /* Added this line */
+}
+
+.media-icons:hover {
+    background-color: var(--color-greenHover);
+}
+
+.media-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.media-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+}
+
+.get-in-touch-span0 {
+    font-size: 20px;
+    /* color: rgb(255, 255, 255); */
+}
+
+.get-in-touch-span1 {
+    font-size: 15px;
+}
+
+.dark{
+    color: rgb(130, 130, 130);
+}
+
+.light{
+    color: rgb(32, 32, 32);
+}
+
+@media only screen and (max-width: 1000px) {
+    .container-of-all {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 90%;
+    }
+
+    .feel-free-container {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .get-in-touch-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        padding: 100px 20px;
+    }
+
+    .container-of-all {
+        width: 100%;
+    }
+
+    .info-input {
+        margin-right: 10px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .input-container {
+        margin-bottom: 10px;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .buttonsContainer {
+        width: 100%;
+    }
+
+    .send-btn,
+    .reset-btn {
+        margin: 0px;
+        width: 100%;
+        font-size: 15px;
+        height: 50px;
+    }
+
+    
+    .back{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .buttonsContainer{
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container {
+        padding: 50px 20px;
+    }
+
+    .buttonsContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

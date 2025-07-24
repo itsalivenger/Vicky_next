@@ -1,0 +1,131 @@
+.productPageContainer {
+  padding: 150px 0;
+  margin: auto;
+  max-width: 1100px;
+}
+
+.textSectionContainer {
+  text-align: center;
+  display: flex;
+  font-size: larger;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+  padding: 4em 0;
+
+  p,
+  h1 {
+    margin: 0;
+  }
+}
+
+.textSection h1 {
+  width: 70%;
+}
+
+.textSection p {
+  font-size: medium;
+  width: 90%;
+}
+
+.detailContainer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.horizontalLine {
+  border: none;
+  border-top: 1px solid #555;
+  margin-bottom: 20px;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 2em 0;
+}
+
+.label {
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.description {
+  flex: 3;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.specificationsTitle,
+.miniTitle {
+  color: white;
+}
+
+.miniTitle {
+  font-size: 1.5rem;
+}
+
+.tempContainer{
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px; /* Space between the cards */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contentContainer {
+    flex-direction: column;
+  }
+
+  .cardsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .label {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .cardsContainer {
+    grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+    gap: 10px;
+  }
+}

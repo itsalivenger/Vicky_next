@@ -1,0 +1,157 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Ensures cards stretch to fill the parent container */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.22s cubic-bezier(0.4,0,0.2,1), box-shadow 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.productImage {
+    max-width: 100%;
+    height: auto;
+    transform: scale(1); /* Changed from 0.7 to 1 */
+    object-fit: contain; /* Changed from cover to contain */
+}
+
+.carouselSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.iconsContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.icon {
+    font-size: 28px;
+    background-color: white;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    color: #111;
+}
+
+.heartIcon:hover {
+    color: #B01E28;
+}
+
+.cartIcon:hover {
+    color: #00ff88;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    flex-grow: 1;
+    /* Makes sure the content area grows and takes remaining space */
+}
+
+.title {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    margin: 0 0 8px;
+    transition: transform .2s ease, color .2s ease;
+}
+
+.title:hover{
+    transform: scale(1.01);
+    color: #00ad5c;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0 0 8px;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 0 0 10px;
+    color: #111;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #00ad5c;
+    /* Pushes the price to the bottom */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 13px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+}

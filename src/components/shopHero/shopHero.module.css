@@ -1,0 +1,69 @@
+.categoryHeader {
+    position: relative;
+    width: 100vw;
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .overlay p, .overlay h1 {
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .title {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .categoryHeader {
+      height: 300px;
+    }
+  
+    .title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .categoryHeader {
+      height: 200px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  }

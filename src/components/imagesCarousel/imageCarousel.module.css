@@ -1,0 +1,23 @@
+.carouselContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .image {
+    width: 97%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .slick-list {
+    margin: 0 -10px;
+  }

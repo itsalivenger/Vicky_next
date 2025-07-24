@@ -1,0 +1,144 @@
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .order-summary, .shipping-address {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .summary-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgb(64, 64, 64);
+    background-color: rgb(27, 27, 27);
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(50, 50, 50);
+  }
+  
+  .cart-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+  .item-title {
+    font-size: 15px;
+    color: white;
+  }
+  
+  .item-price {
+    font-size: 16px;
+    color: rgb(0, 228, 137);
+  }
+  
+  .item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .delete-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+  
+  .delete-btn:hover {
+    color: crimson;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-controls button {
+    border: 1px solid white;
+    background: none;
+    color: white;
+    width: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .quantity-controls button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .quantity-controls input {
+    width: 40px;
+    text-align: center;
+    background: none;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .total-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 228, 137);
+  }
+  
+  .clear-cart {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .clear-cart:hover {
+    background-color: #d9363e;
+  }
+  
+  @media (max-width: 900px) {
+    .cart-container {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .cart-image {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  

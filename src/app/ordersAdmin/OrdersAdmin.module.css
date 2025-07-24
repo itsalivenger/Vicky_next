@@ -1,0 +1,166 @@
+/* General Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    color: #f0f0f0;
+    background-color: #1c1c1c;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    margin-right: 10px;
+}
+
+.searchButton {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #00c853;
+    color: #f0f0f0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+    background-color: #009624;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2c2c2c;
+}
+
+.orderRow th,
+.orderRow td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.orderRow th {
+    background-color: #424242;
+    font-weight: bold;
+}
+
+.actions{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.pending {
+    background-color: #ff9800;
+    color: #1c1c1c;
+}
+
+.completed {
+    background-color: #00c853;
+    color: #1c1c1c;
+}
+
+.cancelled {
+    background-color: #e53935;
+    color: #f0f0f0;
+}
+
+/* Button Styles */
+.btnPrimary,
+.btnSecondary,
+.btnDanger {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btnPrimary {
+    background-color: #00c853;
+    color: #fff;
+}
+
+.btnPrimary:hover {
+    background-color: #009624;
+}
+
+.btnSecondary {
+    background-color: #424242;
+    color: #f0f0f0;
+}
+
+.btnSecondary:hover {
+    background-color: #616161;
+}
+
+.btnDanger {
+    background-color: #e53935;
+    color: #f0f0f0;
+}
+
+.btnDanger:hover {
+    background-color: #d32f2f;
+}
+
+
+.searchSelect{
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    margin-left: 10px;
+}
+
+.statusDropdown {
+    appearance: none; /* Removes default browser styling */
+    background-color: #f4f4f4; /* Light gray background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 12px; /* Padding for spacing */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Dark text color */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: all 0.3s ease; /* Smooth hover and focus effects */
+}
+
+.statusDropdown:hover {
+    background-color: #eaeaea; /* Slightly darker background on hover */
+}
+
+.statusDropdown:focus {
+    outline: none; /* Removes default focus outline */
+    border-color: #888; /* Adds a subtle focus border color */
+    box-shadow: 0 0 5px rgba(136, 136, 136, 0.5); /* Adds a soft shadow on focus */
+}

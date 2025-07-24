@@ -1,26 +1,108 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Palette */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-green: rgb(0, 228, 137); /* to hex code: #00ff9d */
+  --color-greenHover: rgb(1, 146, 88);
+  --color-gray: rgba(255, 255, 255, 0.1);
+  --color-white: #ffffff;
+  --color-black: #000000af;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Gray */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-greenHover);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-greenHover);
+}
+
+/* Material Icons */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111;
+  min-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  z-index: -1;
 }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+video{
+  pointer-events: none;
+}
+
+/* Remove arrows for Firefox */
+input[type="number"] {
+  appearance: textfield;
+}
+
+input:focus {
+  outline: none;
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.light{
+  color: #111 !important;
+}
+
+.dark{
+  color: #fff !important;
+}
+
+.light, .light body {
+  background-color: #fff !important;
+  color: #111 !important;
+}
+
+body.dark, .dark body {
+  background-color: #111 !important;
+  color: #fff !important;
+} 
