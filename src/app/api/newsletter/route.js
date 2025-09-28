@@ -5,10 +5,8 @@ import sendEmail from '../../../../lib/server/sendEmail';
 export async function POST(req) {
   const { email } = await req.json();
 
-  const emailRegex = /^[^
-@]+@[^
-@]+\.[^
-@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (!emailRegex.test(email)) {
     return NextResponse.json({ error: 'Format invalide de l\'email' }, { status: 400 });
   }

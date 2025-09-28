@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
 import { ObjectId } from 'mongodb';
-import { deleteFromCloudinary } from '../../../../lib/server/cloudinaryHelper';
+import { deleteFromCloudinary } from '../../../../../lib/server/cloudinaryHelper';
 
 export async function DELETE(req, { params }) {
   const productId = params.id;

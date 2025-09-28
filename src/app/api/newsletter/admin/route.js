@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
-import sendEmail from '../../../../lib/server/sendEmail';
+import sendEmail from '../../../../../lib/server/sendEmail';
 
 export async function POST(req) {
   const { subject, emailContent } = await req.json();
