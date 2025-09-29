@@ -12,12 +12,12 @@ import LazyMedia from "../../components/lazyMedia/LazyMedia";
 function LoginPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [content, setContent] = useState(null);
+    const [content, setContent] = useState({ title: "", content: "" });
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [visibility, setVisibility] = useState(false);
 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const data = { email, password }
         const response = await sendRequest(`/api/login`, "POST", data);

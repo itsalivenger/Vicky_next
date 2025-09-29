@@ -49,7 +49,7 @@ export default function ProfilePage() {
       <div className={styles.wrapper}>
         <div className={styles.grid}>
           <ProfileCard handleLogout={handleLogout} user={user} />
-          <OrderHistory user={user} orders={orders} />
+          <OrderHistory orders={orders} />
         </div>
       </div>
     </div>

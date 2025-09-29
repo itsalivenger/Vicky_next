@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import ProductCard from '../../components/productCard/productCard';
 import ShopHero from '../../components/shopHero/shopHero';
@@ -26,11 +26,11 @@ const images = [
   { src: '/images/other/img7.jpeg' },
 ];
 
-function Shop() {
+function ShopPage() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [popupContent, setPopupContent] = useState({});
+  const [popupContent, setPopupContent] = useState({ title: '', content: '' });
   const [hasMore, setHasMore] = useState(true);
   const userRef = useRef(null);
 
@@ -39,12 +39,12 @@ function Shop() {
       userRef.current = getUser();
     }
   }, []);
-  const searchParams = useSearchParams();
+  const searchParams: any = useSearchParams();
   const router = useRouter();
 
   const categoryFromUrl = searchParams.get('category') || DEFAULT_CATEGORY;
 
-  const fetchProducts = useCallback(async (category, append = false) => {
+  const fetchProducts = useCallback(async (category: string, append = false) => {
     setIsLoading(true);
   
     try {
@@ -90,13 +90,13 @@ function Shop() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleCategories = (category) => {
+  const handleCategories = (category: string) => {
     if (category !== categoryFromUrl) {
       router.replace(`?category=${category}`);
     }
   };
 
-  const togglePopup = (content) => {
+  const togglePopup = (content: any) => {
     setIsPopupOpen(true);
     setPopupContent(content);
   };
@@ -114,7 +114,7 @@ function Shop() {
         {isLoading ? (
           <LoadingSpinner />
         ) : products.length > 0 ? (
-          products.map((product, index) => (
+          products.map((product: { id: string}, index) => (
             <ProductCard
               togglePopup={togglePopup}
               user_id={userRef.current}
@@ -148,9 +148,18 @@ function Shop() {
         onClose={() => setIsPopupOpen(false)}
         title={popupContent.title}
         content={popupContent.content}
+        onConfirm={()=> setIsPopupOpen(false)}
       />
     </div>
   );
 }
 
-export default Shop;
+
+// **FIX #1: Create a new root component for the page that provides the Suspense boundary.**
+export default function Shop() {
+    return (
+        <Suspense fallback={<div className={styles['loading-container']}>Loading Page...</div>}>
+            <ShopPage />
+        </Suspense>
+    );
+}

@@ -22,14 +22,14 @@ function AdminPage() {
             router.push('/'); // Redirect to home or a non-admin page
         }
     }, [isAuthenticated, isAdmin, isLoading, router]);
-
-    const [currentContent, setCurrentContent] = useState(<LoadingSpinner />);
+    const [currentContent, setCurrentContent] = useState<React.ReactNode>(<LoadingSpinner />);
+    
 
     if (isLoading || !isAuthenticated || !isAdmin) {
         return null; // Or a loading spinner/message while redirecting
     }
 
-    const handleContent = (content) => {
+    const handleContent = (content: React.ReactNode) => {
         setCurrentContent(content);
     }
 

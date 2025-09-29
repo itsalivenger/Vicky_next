@@ -34,7 +34,7 @@ function OrdersAdmin() {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchBy, setSearchBy] = useState('email');
     const [isOpen, setIsOpen] = useState(false);
-    const [content, setContent] = useState({});
+    const [content, setContent] = useState({ title: '', content: '' });
     const [onConfirm, setOnConfirm] = useState(() => () => { });
     const [toggled, setToggled] = useState(false);
     const [orderPrev, setOrderPrev] = useState({});
@@ -75,32 +75,32 @@ function OrdersAdmin() {
         }
     }
 
-    const handleRemove = (id) => {
+    const handleRemove = (id: string) => {
         setContent({ title: "Confirmation", content: "Voulez-vous vraiment supprimer cette commande?" });
         setOnConfirm(() => () => removeOrder(id));
         setIsOpen(true);
     };
 
-    const removeOrder = async (id) => {
+    const removeOrder = async (id: string) => {
         const response = await sendRequest(`${serverDomain}/orders/${id}`, 'DELETE');
         if (response.error) {
             console.log(response.error);
             setContent({ title: "Error", content: response.error });
             setIsOpen(true);
         } else {
-            const updatedOrders = orders.filter((order) => order._id !== id);
+            const updatedOrders = orders.filter((order: any) => order._id !== id);
             setOrders(updatedOrders);
         }
     };
 
-    const handleStatusChange = async (newStatus, orderId) => {
+    const handleStatusChange = async (newStatus: any, orderId: any) => {
         const response = await sendRequest(`/api/orders/status/${orderId}`, 'PUT', { newStatus });
         if (response.error) {
             console.log(response.error);
             setContent({ title: "Error", content: response.error });
             setIsOpen(true);
         } else {
-            const updatedOrders = orders.map((order) => {
+            const updatedOrders: any = orders.map((order: any) => {
                 if (order._id === orderId) {
                     return { ...order, status: newStatus };
                 }
@@ -110,7 +110,7 @@ function OrdersAdmin() {
         }
     };
 
-    const handleOrderPrev = (order) => {
+    const handleOrderPrev = (order: any) => {
         setToggled(true);
         setOrderPrev(order);
     }
@@ -166,7 +166,7 @@ function OrdersAdmin() {
                     </tr>
                 </thead>
                 <tbody>
-                    {orders.map((order) => (
+                    {orders.map((order: any) => (
                         <Order handleOrderPrev={handleOrderPrev} handleStatusChange={handleStatusChange} handleRemove={handleRemove} key={order._id} order={order} />
                     ))}
                 </tbody>
@@ -176,18 +176,18 @@ function OrdersAdmin() {
     );
 }
 
-function Order({ order, handleRemove, handleStatusChange, handleOrderPrev }) {
-    const shortenId = (id) => {
+function Order({ order, handleRemove, handleStatusChange, handleOrderPrev }: { order: any, handleRemove: any, handleStatusChange: any, handleOrderPrev: any }) {
+    const shortenId = (id: string) => {
         if (!id) return '';
         return id.slice(0, 8);
     };
 
-    const shortenDate = (date) => {
+    const shortenDate = (date: string) => {
         if (!date) return '';
         return date.slice(0, 10);
     };
 
-    const shortenEmail = (email) => {
+    const shortenEmail = (email: string) => {
         if (!email) return '';
         const [localPart, domainPart] = email.split('@');
         return `${localPart.slice(0, 5)}...@${domainPart}`;

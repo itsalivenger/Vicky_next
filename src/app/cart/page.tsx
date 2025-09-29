@@ -14,10 +14,45 @@ import { serverDomain, domain } from '../../components/other/variables';
 import sendRequest from '../../components/other/sendRequest';
 import Popup from '../../components/popup/popup';
 
+
+interface CartItem {
+  _id: string;
+  productName: string;
+  price: number;
+  quantity: number;
+  imageUrls: string[];
+}
+
+interface CartProps {
+  cart: CartItem[];
+  setCart: React.Dispatch<React.SetStateAction<CartItem[]>>;
+}
+
+interface CheckoutProps {
+  formData: {
+    firstName: string;
+    lastName: string;
+    address: string;
+    apartment: string;
+    city: string;
+    postalCode: string;
+    email: string;
+    phone: string;
+    notes: string;
+  };
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  applyPromo: (e: React.FormEvent<HTMLFormElement>) => void;
+}
+
+interface FinalizeProps {
+  cart: CartItem[];
+  handleSubmit: () => void;
+}
+
 function CheckoutPage() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [cart, setCart] = useState([]);
-  const [content, setContent] = useState(null);
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [content, setContent] = useState({ title: '', content: '', type: '' });
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -31,7 +66,7 @@ function CheckoutPage() {
     notes: ''
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -56,7 +91,8 @@ function CheckoutPage() {
       setIsOpen(true);
       setContent({
         title: 'Alerte.',
-        content: 'Votre panier est vide.'
+        content: 'Votre panier est vide.',
+        type: 'error'
       })
       setCurrentStep(currentStep)
     }
@@ -66,14 +102,15 @@ function CheckoutPage() {
       setIsOpen(true);
       setContent({
         title: 'Erreur.',
-        content: 'Veuillez remplir tous les champs.'
+        content: 'Veuillez remplir tous les champs.',
+        type: 'error'
       })
       setCurrentStep(currentStep)
     }
   };
 
 
-  const applyPromo = (e) => {
+  const applyPromo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Promo Submitted:', formData);
   };
@@ -86,7 +123,8 @@ function CheckoutPage() {
 
   const handleSubmit = async () => {
     console.log('Form Submitted:', formData);
-    const response = await sendRequest(`/api/checkout`, 'POST', { formData, user: getUser(), cart });
+    const obj = { formData, user: getUser(), cart }
+    const response = await sendRequest(`/api/checkout`, 'POST', obj, {}, false);
 
     if (!response.error) {
       updateCartInServer([]);
@@ -106,13 +144,13 @@ function CheckoutPage() {
   const renderStepComponent = () => {
     switch (currentStep) {
       case 1:
-        return <Cart cart={cart} setCart={setCart} />;
+        return <Cart {...{ cart, setCart } as CartProps} />;
       case 2:
-        return <Checkout formData={formData} handleChange={handleChange} applyPromo={applyPromo} />;
+        return <Checkout {...{ formData, handleChange, applyPromo } as CheckoutProps} />;
       case 3:
-        return <Finalize cart={cart} handleSubmit={handleSubmit} />;
+        return <Finalize {...{ cart, handleSubmit } as FinalizeProps} />;
       default:
-        return <Cart cart={cart} setCart={setCart} />;
+        return <Cart {...{ cart, setCart } as CartProps} />;
     }
   };
 
@@ -158,7 +196,7 @@ function CheckoutPage() {
               Suivant
             </button>
           )}
-          {content && <Popup isOpen={isOpen} onClose={() => setIsOpen(false)} title={content.title} content={content.content} />}
+          {content && <Popup onConfirm={() => setIsOpen(false)} isOpen={isOpen} onClose={() => setIsOpen(false)} title={content.title} content={content.content} />}
         </div>
       </div>
     </div>

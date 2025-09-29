@@ -104,8 +104,8 @@ function ProductPage() {
                     </div>
                 </div>
                 <MediaDisplay type={'video'} src={'/videos/adVid.mp4'} />
-                <ImageBesidesText imageSrc={'/images/products/prodDisplay3.jpeg'} title={'Lorem ipsum dolor sit amet'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'} />
-                <ImageBesidesText reverse={true} imageSrc={'/images/products/prodDisplay3.jpeg'} title={'Lorem ipsum dolor sit amet'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'} />
+                <ImageBesidesText reverse={false} subtitle={''} imageSrc={'/images/products/prodDisplay3.jpeg'} title={'Lorem ipsum dolor sit amet'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'} />
+                <ImageBesidesText reverse={true} subtitle={''} imageSrc={'/images/products/prodDisplay3.jpeg'} title={'Lorem ipsum dolor sit amet'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'} />
 
                 <div className={styles['detailsContainer']}>
                     <h2 className={styles.specificationsTitle}>Specifications.</h2>
@@ -119,7 +119,7 @@ function ProductPage() {
 
                 <div className={styles['similarProductsContainer'] + ' ' + styles['cardsContainer']}>
                     {products && products.map((product, index) => (
-                        <ProductCard key={index} product={product} />
+                        <ProductCard user_id={''} togglePopup={() => {}} key={index} product={product} />
                     ))}
                 </div>
             </div>
@@ -132,7 +132,7 @@ function ProductPage() {
 }
 
 
-const DetailSection = ({ label, description }) => {
+const DetailSection = ({ label, description }: { label: string; description: string }) => {
     return (
         <div className={styles.detailContainer}>
             <hr className={styles.horizontalLine} />

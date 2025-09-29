@@ -23,8 +23,6 @@ function LayoutWithParticles({ children }: { children: React.ReactNode }) {
         isAuthenticated={isAuthenticated}
         isAdmin={isAdmin}
         onLogout={handleLogout}
-        theme={theme}
-        toggleTheme={toggleTheme}
       />
       {children}
       <Footer />

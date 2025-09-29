@@ -16,7 +16,7 @@ function SignupPage() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const [content, setContent] = useState({});
+  const [content, setContent] = useState({ title: "", content: "" });
 
   // Form validity state to track if the button should be enabled
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -45,7 +45,7 @@ function SignupPage() {
     // isValidEmail(email);
     // isValidPassword(password);
     // isValidPhoneNumber(phoneNumber);
-    setIsFormValid((fullName && email && password && termsAccepted && phoneNumber))
+    setIsFormValid(Boolean(fullName && email && password && termsAccepted && phoneNumber))
   }, [fullName, email, password, phoneNumber, termsAccepted]);
 
   // Check form validity on state change
@@ -53,13 +53,13 @@ function SignupPage() {
     isInputValid();
   }, [fullName, email, password, termsAccepted, phoneNumber, isInputValid]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const result = formValidation({ email, password, phoneNumber })
 
     if (!result.success) {
-      setContent({ title: "Error", content: result.errors });
+      setContent({ title: "Error", content: String(result.errors) });
       setIsPopupOpen(true);
       return;
     }

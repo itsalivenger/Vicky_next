@@ -1,3 +1,12 @@
+/**
+ * Sends an HTTP request.
+ * @param {string} url The URL to send the request to.
+ * @param {'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'} [method='GET'] The HTTP method.
+ * @param {any} [body=null] The request body.
+ * @param {Record<string, string>} [headers={}] Additional headers.
+ * @param {boolean} [isFormData=false] Set to true if the body is FormData.
+ * @returns {Promise<any>} The JSON response from the server.
+ */
 async function sendRequest(url, method = 'GET', body = null, headers = {}, isFormData) {
     try {
         const options = {

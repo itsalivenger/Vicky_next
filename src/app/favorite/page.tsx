@@ -13,7 +13,7 @@ export default function FavoritesPage() {
   const [items, setItems] = useState([]);
   const [user] = useState(getUser());
   const [isOpen, setIsOpen] = useState(false);
-  const [content, setContent] = useState({});
+  const [content, setContent] = useState({ title: '', content: '' });
 
   useEffect(() => {
     const getItems = async () => {
@@ -23,16 +23,16 @@ export default function FavoritesPage() {
     getItems();
   }, [content]);
 
-  const togglePopup = ({ title, content }) => {
+  const togglePopup = ({ title, content }: { title: any; content: any }) => {
     setIsOpen(!isOpen);
     setContent({ title, content });
   }
 
-  const removeItemFromFavorite = async (id) => {
+  const removeItemFromFavorite = async (id: string) => {
     const response = await sendRequest(`/api/favorite/delete`, 'POST', { user_id: user._id, product_Id: id });
     if (!response.error) {
       togglePopup({ title: 'Success', content: response.message });
-      user.favorite = user.favorite.filter(item => item.toString() !== id);
+      user.favorite = user.favorite.filter((item: string) => item.toString() !== id);
       localStorage.setItem('user', JSON.stringify(user));
     } else {
       togglePopup({ title: 'Error', content: response.error });
@@ -61,7 +61,7 @@ export default function FavoritesPage() {
           <EmptyState />
         )}
       </div>
-      <Popup isOpen={isOpen} onClose={() => setIsOpen(false)} title={content.title} content={content.content} />
+      <Popup onConfirm={() => setIsOpen(false)} isOpen={isOpen} onClose={() => setIsOpen(false)} title={content.title} content={content.content} />
     </div>
   );
 }

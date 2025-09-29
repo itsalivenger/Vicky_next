@@ -62,7 +62,7 @@ function Home() {
         <ProductsCardsCarousel categories={['Casque', 'Souris', 'Clavier', 'Offres 10%']} />
         <ProductsCarousel togglePopup={togglePopup} products={products.length ? products : []} />
         <ColoredDivider />
-        <LazyMedia type="image" img={"/images/flayers/gaming.jpeg"} vid={"https://res.cloudinary.com/dkhvdihhj/video/upload/v1739022957/watchLast_rd2hpb.mp4"} />
+        <LazyMedia src={null} type="image" img={"/images/flayers/gaming.jpeg"} vid={"https://res.cloudinary.com/dkhvdihhj/video/upload/v1739022957/watchLast_rd2hpb.mp4"} />
         <TitleAndText 
           title={"Améliorez Votre Expérience de Jeu"} 
           text={`Optimisez votre expérience de jeu avec des accessoires performants, des casques audio immersifs et des périphériques conçus pour offrir précision et confort lors de vos sessions gaming.`} 
@@ -71,7 +71,7 @@ function Home() {
         <ProductsCardsCarousel categories={['Casque', 'Souris', 'Clavier', 'Offres 10%']} />
         <ProductsCarousel togglePopup={togglePopup} products={products.length ? products : []} />
         <ColoredDivider />
-        <LazyMedia type="image" img={"/images/flayers/watch.jpeg"} vid={"https://res.cloudinary.com/dkhvdihhj/video/upload/v1739022991/hero2_cryi01.mp4"} />
+        <LazyMedia src={null} type="image" img={"/images/flayers/watch.jpeg"} vid={"https://res.cloudinary.com/dkhvdihhj/video/upload/v1739022991/hero2_cryi01.mp4"} />
         <TitleAndText 
           title={"Produits Tendance"} 
           text={`Découvrez notre sélection de produits innovants, des accessoires tech de qualité pour améliorer votre quotidien.`} 

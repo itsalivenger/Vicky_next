@@ -4,16 +4,14 @@ import { useState } from "react";
 import styles from "./ResetPass.module.css";
 import Popup from "../../components/popup/popup";
 import sendRequest from "../../components/other/sendRequest";
-import { serverDomain } from "../../components/other/variables";
-import Link from "next/link";
 
 function ResetPass() {
     const [email, setEmail] = useState('');
-    const [content, setContent] = useState('');
+    const [content, setContent] = useState({ title: '', content: '' });
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const response = await sendRequest(`/api/resetPass`, 'POST', { email });
         console.log(response);
