@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { connectToDb } from '../../../../lib/server/connection';
+import { connectToDb } from '../../../../../lib/server/connection';
 import { ObjectId } from 'mongodb';
 
 export async function DELETE(req, { params }) {
