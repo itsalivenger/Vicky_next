@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect, useRef } from "react";
 
 const LazyMedia = ({ type, src, alt = "", className = "", poster = "", preload = false, ...props }) => {

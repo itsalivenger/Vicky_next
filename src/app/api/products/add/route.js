@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
-import { uploadToCloudinary } from '../../../../../lib/server/cloudinaryHelper';
+import { uploadToCloudinary } from '../../../../lib/server/cloudinaryHelper';
 
 export async function POST(req) {
   try {

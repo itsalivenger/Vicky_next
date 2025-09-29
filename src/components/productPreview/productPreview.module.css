@@ -142,8 +142,8 @@
     box-sizing: border-box;
 }
 
-.pseudo-body input[type="number"]::-webkit-outer-spin-button,
-.pseudo-body input[type="number"]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
