@@ -9,7 +9,7 @@ import { ThemeProvider, useTheme } from "../components/other/useTheme";
 import ParticlesBackground from "../components/particles/Particle";
 import React from 'react';
 import { AuthProvider, useAuth } from '../components/auth/AuthContext';
-import NotFound from "./not-found";
+import Unavailable from "./unavailable/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,8 +43,7 @@ export default function RootLayout({
     return (
       <html lang="en">
         <body className={inter.className}>
-          {/* white colored text in tailwind*/}
-          <h1 className="text-white">La version de la page a expiré</h1>
+          <Unavailable />
         </body>
       </html>
     );
