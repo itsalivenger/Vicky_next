@@ -36,7 +36,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const expirationDate = new Date('2025-03-31');
+  const expirationDate = new Date('2025-12-31');
   const currentDate = new Date();
 
   if (currentDate > expirationDate) {
