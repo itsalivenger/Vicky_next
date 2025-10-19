@@ -17,20 +17,9 @@ interface ParticlesBackgroundProps {
 }
 
 const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({ theme }) => {
-  const [init, setInit] = useState(false);
-
-  // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
     });
   }, []);
 
@@ -42,7 +31,7 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({ theme }) => {
     () => ({
       background: {
         color: {
-          value: theme === "dark" ? "#000000" : "#ffffff", // Example: black for dark, white for light
+          value: theme === "dark" ? "#000000" : "#ffffff",
         },
       },
       fpsLimit: 120,
@@ -69,7 +58,7 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({ theme }) => {
       },
       particles: {
         color: {
-          value: theme === "dark" ? "#ffffff" : "#000000", // Example: white particles for dark, black for light
+          value: theme === "dark" ? "#ffffff" : "#000000",
         },
         links: {
           color: theme === "dark" ? "#ffffff" : "#000000",
@@ -109,17 +98,13 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({ theme }) => {
     [theme],
   );
 
-  if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
-  }
-
-  return <></>;
+  return (
+    <Particles
+      id="tsparticles"
+      particlesLoaded={particlesLoaded}
+      options={options}
+    />
+  );
 };
 
 export default ParticlesBackground;
