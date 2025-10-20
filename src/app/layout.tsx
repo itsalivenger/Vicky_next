@@ -1,6 +1,5 @@
 "use client";
-
-import type { Metadata } from "next";
+import WhatsappWidget from "../components/whatsappWidget/whatsappWidget";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Nav/Navbar";
@@ -10,6 +9,7 @@ import ParticlesBackground from "../components/particles/Particle";
 import React from 'react';
 import { AuthProvider, useAuth } from '../components/auth/AuthContext';
 import Unavailable from "./unavailable/page";
+import { contactInfo } from "@/components/other/variables";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +26,9 @@ function LayoutWithParticles({ children }: { children: React.ReactNode }) {
         onLogout={handleLogout}
       />
       {children}
+      
       <Footer />
+      <WhatsappWidget phoneNumber={contactInfo.phoneNumber} text="Contactez-nous" />
     </>
   );
 }
