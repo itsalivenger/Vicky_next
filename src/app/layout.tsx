@@ -10,6 +10,7 @@ import React from 'react';
 import { AuthProvider, useAuth } from '../components/auth/AuthContext';
 import Unavailable from "./unavailable/page";
 import { contactInfo } from "@/components/other/variables";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,10 @@ function LayoutWithParticles({ children }: { children: React.ReactNode }) {
   return (
     <>
       <ParticlesBackground theme={theme} />
+      <Head>
+        <title>Heatz | Votre univers électronique</title>
+        <meta name="description" content="Your page description" />
+      </Head>
       <Navbar
         isAuthenticated={isAuthenticated}
         isAdmin={isAdmin}
