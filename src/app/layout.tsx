@@ -23,7 +23,27 @@ function LayoutWithParticles({ children }: { children: React.ReactNode }) {
       <ParticlesBackground theme={theme} />
       <Head>
         <title>Heatz | Votre univers électronique</title>
-        <meta name="description" content="Your page description" />
+        <meta name="description" content="Achetez vos appareils électroniques, accessoires et gadgets au meilleur prix. Livraison rapide et service fiable." />
+
+        <meta name="description" content="Achetez vos appareils électroniques, accessoires et gadgets au meilleur prix. Livraison rapide et service fiable." />
+
+        <meta name="keywords" content="électronique, gadgets, composants, accessoires, high-tech, circuits, modules" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta property="og:title" content="ElectroZone – La technologie à portée de main" />
+        <meta property="og:description" content="Achetez vos appareils électroniques, accessoires et gadgets au meilleur prix. Livraison rapide et service fiable." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="https://www.votre-site-electro.com/og-image.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ElectroZone – La technologie à portée de main" />
+        <meta name="twitter:description" content="Achetez vos appareils électroniques, accessoires et gadgets au meilleur prix. Livraison rapide et service fiable." />
+        <meta name="twitter:image" content="https://www.votre-site-electro.com/og-image.jpg" />
+
+        <link rel="canonical" href="https://www.votre-site-electro.com" />
+
       </Head>
       <Navbar
         isAuthenticated={isAuthenticated}
@@ -48,7 +68,7 @@ export default function RootLayout({
 
   if (currentDate > expirationDate) {
     return (
-      <html lang="en">
+      <html lang="en" >
         <body className={inter.className}>
           <Unavailable />
         </body>
@@ -59,7 +79,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
       </head>
       <body className={inter.className}>
