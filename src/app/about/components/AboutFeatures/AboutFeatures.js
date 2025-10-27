@@ -30,7 +30,7 @@ export default function AboutFeatures() {
     <div className={styles.features}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.subtitle}>Pourquoi Choisir Heatz</h2>
+          <h2 className={styles.subtitle}>Pourquoi Choisir Vicky</h2>
           <p className={styles.title}>
             Tout ce dont vous avez besoin en accessoires électroniques
           </p>

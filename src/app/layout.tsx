@@ -22,7 +22,7 @@ function LayoutWithParticles({ children }: { children: React.ReactNode }) {
     <>
       <ParticlesBackground theme={theme} />
       <Head>
-        <title>Heatz | Votre univers électronique</title>
+        <title>Vicky | Votre univers électronique</title>
         <meta name="description" content="Achetez vos appareils électroniques, accessoires et gadgets au meilleur prix. Livraison rapide et service fiable." />
 
         <meta name="description" content="Achetez vos appareils électroniques, accessoires et gadgets au meilleur prix. Livraison rapide et service fiable." />
@@ -31,14 +31,14 @@ function LayoutWithParticles({ children }: { children: React.ReactNode }) {
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta property="og:title" content="ElectroZone – La technologie à portée de main" />
+        <meta property="og:title" content="Vicky – La technologie à portée de main" />
         <meta property="og:description" content="Achetez vos appareils électroniques, accessoires et gadgets au meilleur prix. Livraison rapide et service fiable." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="" />
         <meta property="og:image" content="https://www.votre-site-electro.com/og-image.jpg" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ElectroZone – La technologie à portée de main" />
+        <meta name="twitter:title" content="Vicky – La technologie à portée de main" />
         <meta name="twitter:description" content="Achetez vos appareils électroniques, accessoires et gadgets au meilleur prix. Livraison rapide et service fiable." />
         <meta name="twitter:image" content="https://www.votre-site-electro.com/og-image.jpg" />
 

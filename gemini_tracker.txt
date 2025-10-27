@@ -1,1 +1,12 @@
-C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\components\Footer\Footer.js
+C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\about\components\AboutHero\AboutHero.js
+C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\about\components\AboutTestimonials\AboutTestimonials.js
+- Replaced "Les produits Heatz ont complètement transformé mon expérience de charge. La qualité de fabrication et la fiabilité sont inégalées." with "Les produits Vicky ont complètement transformé mon expérience de charge. La qualité de fabrication et la fiabilité sont inégalées."
+- Replaced "En tant que photographe, des accessoires fiables sont essentiels. Heatz offre l'excellence à chaque fois." with "En tant que photographe, des accessoires fiables sont essentiels. Vicky offre l'excellence à chaque fois."
+- Replaced "Les capacités de charge rapide des produits Heatz ont révolutionné mon flux de travail mobile." with "Les capacités de charge rapide des produits Vicky ont révolutionné mon flux de travail mobile."
+C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\privacyPolicy\page.tsx
+- Replaced "Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Heatz." with "Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Vicky."
+- Replaced displayed text "Heatz.com" with "Vicky.com" in the website reference.
+- Replaced email address "contact@heatz.ma" with "contact@vicky.ma".
+- Replaced displayed text "Heatz.com" with "Vicky.com" in the website contact reference.
+C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\success\page.tsx
+- Replaced alt="Company Logo" with alt="Vicky Logo".

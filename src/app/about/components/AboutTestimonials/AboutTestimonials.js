@@ -7,21 +7,21 @@ const testimonials = [
     name: "Ali yahdin",
     role: "",
     image: "/images/icons/user.png",
-    content: "Les produits Heatz ont complètement transformé mon expérience de charge. La qualité de fabrication et la fiabilité sont inégalées.",
+    content: "Les produits Vicky ont complètement transformé mon expérience de charge. La qualité de fabrication et la fiabilité sont inégalées.",
     rating: 4
   },
   {
     name: "Omar Othman",
     role: "",
     image: "/images/icons/user.png",
-    content: "En tant que photographe, des accessoires fiables sont essentiels. Heatz offre l'excellence à chaque fois.",
+    content: "En tant que photographe, des accessoires fiables sont essentiels. Vicky offre l'excellence à chaque fois.",
     rating: 5
   },
   {
     name: "Salim Dani",
     role: "",
     image: "/images/icons/user.png",
-    content: "Les capacités de charge rapide des produits Heatz ont révolutionné mon flux de travail mobile.",
+    content: "Les capacités de charge rapide des produits Vicky ont révolutionné mon flux de travail mobile.",
     rating: 3
   }
 ];
