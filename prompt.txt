@@ -1,0 +1,4 @@
+Primary Background	Black	#000000	Main background for the site, creating a premium feel and making products stand out.
+Primary Text	White / Bright Grey	#FFFFFF	All main body text, headings, and labels for maximum readability on the black background.
+Primary Accent / CTA	Vibrant Magenta	#FF0080 (A bright pink)	Call-to-Action (CTA) buttons (e.g., "Buy Now," "Add to Cart"), pricing, sales badges, and key interactive elements to draw the user's eye.
+Secondary Accent	Deep Purple	#6A1B9A (A rich indigo)	Hover states, borders, section dividers, and subtle gradients for a dynamic, modern feel.

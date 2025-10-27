@@ -54,13 +54,13 @@ const Footer = () => {
                 <div className={styles["footer-top"]}>
                     <div className={styles["footer-brand"]}>
                         <div className={styles["logo"]}>
-                            <LazyMedia type="image" src="/images/logos/HeatzLogo.png" alt="Logo" />
+                            <LazyMedia type="image" src="/images/logos/HeatzLogo.png" alt="Vicky" />
                         </div>
 
                         <SocialMedia />
 
                         <p className={`${styles["footer-description"]}`}>
-                            Heatz® est une marque déposée, désormais fièrement disponible au Maroc. Connue pour sa large variété et ses produits de haute qualité, Heatz® a marqué sa présence à l'échelle mondiale, notamment au Moyen-Orient et en Afrique du Nord. Nos clients marocains peuvent découvrir des produits innovants Heatz® conçus pour améliorer chaque saison, des écouteurs de premier choix aux derniers accessoires technologiques.
+                            Vicky® est une marque déposée, désormais fièrement disponible au Maroc. Connue pour sa large variété et ses produits de haute qualité, Vicky® a marqué sa présence à l'échelle mondiale, notamment au Moyen-Orient et en Afrique du Nord. Nos clients marocains peuvent découvrir des produits innovants Vicky® conçus pour améliorer chaque saison, des écouteurs de premier choix aux derniers accessoires technologiques.
                         </p>
                         <form onSubmit={handleSubmit} className={styles["newsletter-form"]}>
                             <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className={styles["newsletter-input"]} placeholder="Entrez votre adresse e-mail" />
@@ -114,7 +114,7 @@ const Footer = () => {
                 </div>
 
                 <div className={styles["footer-bottom"]}>
-                    <p>Copyright © {currentYear} Heatz - Tous droits réservés.</p>
+                    <p>Copyright © {currentYear} Vicky - Tous droits réservés.</p>
                 </div>
             </div>
         </footer>

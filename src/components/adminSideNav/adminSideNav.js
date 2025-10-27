@@ -39,7 +39,7 @@ function  AdminSideNav({ handleContent }) {
             </div>
 
             <div className={styles.logo}>
-                <LazyMedia type="image" src='/images/logos/HeatzLogo.png' alt='Heatz logo' className={styles.logoText} />
+                <LazyMedia type="image" src='/images/logos/HeatzLogo.png' alt='Vicky logo' className={styles.logoText} />
                 <i className={`${styles.icon} material-symbols-outlined`}></i>
             </div>
             <nav className={styles.navMenu}>

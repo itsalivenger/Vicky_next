@@ -108,7 +108,7 @@ function Navbar({ isAuthenticated, isAdmin, onLogout }) {
 
         <div className={styles["mobile-logo"]}>
           {/* <LazyMedia type={'image'} src='./images/logos/HeatzLogo.png' alt='Heatz Logo' /> */}
-          <img src='/images/logos/HeatzLogo.png' alt='Heatz Logo' />
+          <img src='/images/logos/HeatzLogo.png' alt='Vicky Logo' />
         </div>
         <SearchBar handleSubmit={handleSubmit} toggleSearchInput={toggleSearchInput} isActive={isSearchActive} />
         <div onClick={() => setMenuIsToggled(!menuIsToggled)} className={`${styles.hamburger} ${styles["info-container"]}`}>

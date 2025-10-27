@@ -10,7 +10,7 @@ const serverDomain = serverDeploy;
 
 const contactInfo = {
     phoneNumber: "+212 70 74 59 147",
-    email: "contact@heatz.ma",
+    email: "contact@vicky.ma",
     address: "Maroc - Casablanca"
 };
 

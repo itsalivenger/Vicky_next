@@ -1,0 +1,17 @@
+# Color Palette Information
+
+This file defines the core color palette used throughout the Vicky_next project. Each variable represents a specific color used for various UI elements, ensuring consistency in design.
+
+## Palette Definitions:
+
+- `primaryBackground`: Defines the main background color for the application.
+  - Value: #000000 (Black)
+
+- `primaryText`: Specifies the primary text color used for readability against backgrounds.
+  - Value: #FFFFFF (White)
+
+- `primaryAccent`: Represents the main accent color, often used for interactive elements or highlights.
+  - Value: #FF0080 (Bright Pink)
+
+- `secondaryAccent`: Provides a secondary accent color, complementing the primary accent.
+  - Value: #6A1B9A (Deep Purple)
