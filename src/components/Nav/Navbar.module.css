@@ -28,9 +28,34 @@
     position: absolute;
 }
 
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar-logo .logo-icon {
     font-size: 24px;
     color: var(--color-green);
+}
+
+.logo-fixed-size {
+    width: 80px; /* Fixed width for the img tag */
+    height: 80px; /* Fixed height for the img tag */
+    object-fit: cover; /* This will make the image content "bigger" by covering the entire fixed area, cropping if necessary */
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+
+.mobile-logo-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
 }
 
 .mobile-logo {
@@ -134,6 +159,11 @@
     font-weight: bolder;
 }
 
+.hamburger img {
+    width: 30px;
+    height: 30px;
+}
+
 .inactive {
     opacity: 0;
 }
@@ -142,7 +172,7 @@
     .linksContainer {
         position: absolute;
         flex-direction: column-reverse;
-        justify-content: right;
+        justify: right;
         gap: 3em;
         height: 100vh;
         overflow: hidden;
@@ -172,9 +202,7 @@
         color: var(--color-green);
     }
 
-    .mobile-logo img {
-        width: 100px;
-    }
+    /* Removed .mobile-logo img width: 100px; */
 
     .closeBtnContainer {
         width: 100%;
@@ -185,6 +213,10 @@
     .hamburger {
         z-index: -1;
         display: block;
+    }
+
+    .logo-fixed-size {
+        display: none;
     }
 }
 

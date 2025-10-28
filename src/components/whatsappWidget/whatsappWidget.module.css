@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    background: var(--color-green);
+    background: rgb(0, 228, 137);
     padding: 8px 16px;
     border-radius: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

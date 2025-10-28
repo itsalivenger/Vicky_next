@@ -30,7 +30,7 @@ function Navbar({ isAuthenticated, isAdmin, onLogout }) {
       <nav className={`${styles.navbar} ${theme === 'dark' ? styles.dark : styles.light} ${pathname === '/' ? styles["navbar-home"] : ''}`}>
         <Link onClick={() => setMenuIsToggled(!menuIsToggled)} href={'/'} className={styles["navbar-logo"]}>
           {/* <LazyMedia type={'image'} src={"./images/logos/Vector.svg"} alt='this is the company logo' /> */}
-          <img src='/images/logos/Vector.svg' alt='this is the company logo' />
+          <img src='/images/logos/Vicky_no_bg.png' alt='this is the company logo' className={styles["logo-fixed-size"]} />
         </Link>
 
         <div className={`${styles["linksContainer"]} toggledMenu ${menuIsToggled ? styles.toggledMenu : ''}`}>
@@ -108,7 +108,7 @@ function Navbar({ isAuthenticated, isAdmin, onLogout }) {
 
         <div className={styles["mobile-logo"]}>
           {/* <LazyMedia type={'image'} src='./images/logos/HeatzLogo.png' alt='Heatz Logo' /> */}
-          <img src='/images/logos/HeatzLogo.png' alt='Vicky Logo' />
+          <img src='/images/logos/Vicky_no_bg.png' alt='Vicky Logo' className={styles["mobile-logo-image"]} />
         </div>
         <SearchBar handleSubmit={handleSubmit} toggleSearchInput={toggleSearchInput} isActive={isSearchActive} />
         <div onClick={() => setMenuIsToggled(!menuIsToggled)} className={`${styles.hamburger} ${styles["info-container"]}`}>

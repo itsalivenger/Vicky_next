@@ -19,7 +19,7 @@ const WhatsAppWidget = ({ phoneNumber, text='' }) => {
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
       >
-        <LazyMedia type="image" className={styles.whatsappIcon} src="./images/icons/whatsapp.png" alt="whatsapp" width={50} height={50} unoptimized={true} />
+        <LazyMedia type="image" className={styles.whatsappIcon} src="./images/icons/whatsapp.png" alt="whatsapp" width={50} height={50}/>
         <span className={styles.whatsappText}>{text}</span>
       </a>
     </div>

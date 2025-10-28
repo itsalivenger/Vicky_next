@@ -4,8 +4,8 @@
 
 /* Palette */
 :root {
-  --color-green: rgb(0, 228, 137); /* to hex code: #00ff9d */
-  --color-greenHover: rgb(1, 146, 88);
+  --color-green: #FF0080; /* to hex code: #00ff9d */
+  --color-greenHover: #CC0066;
   --color-gray: rgba(255, 255, 255, 0.1);
   --color-white: #ffffff;
   --color-black: #000000af;
