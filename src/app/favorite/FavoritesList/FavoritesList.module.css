@@ -1,7 +1,15 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1200px; /* Limit width for better presentation */
+  justify-content: center;
+  align-items: start;
 }
 
 .card {
@@ -87,14 +95,41 @@
   margin-right: 0.5rem;
 }
 
-@media (min-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.title {
+  grid-column: 1 / -1; /* Span across all columns */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 10px; /* Reduced margin-bottom */
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(255, 0, 128, 0.8), 0 0 30px rgba(255, 0, 128, 0.6);
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 0, 128, 0.5);
 }
 
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.icon {
+  color: #ff0080; /* Main pink color */
+  font-size: 5.5rem;
+  filter: drop-shadow(0 0 12px rgba(255, 0, 128, 1));
+  transition: filter 0.3s ease-in-out;
+}
+
+.icon:hover {
+  filter: drop-shadow(0 0 20px rgba(255, 0, 128, 1)) brightness(1.2);
+}
+
+.subtitle {
+  grid-column: 1 / -1; /* Span across all columns */
+  text-align: center;
+  margin-top: 10px; /* Added margin-top */
+  margin-bottom: 2.5rem;
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }

@@ -9,6 +9,36 @@
     background-color: rgb(34, 34, 34);
 }
 
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.icon {
+    color: #ff0080; /* Main pink color */
+    font-size: 3rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
 .favorite-title {
     font-size: 30px;
     font-weight: 700;

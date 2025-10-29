@@ -6,10 +6,22 @@ import { Icon } from '../ui/Icon/Icon';
 import styles from './FavoritesList.module.css';
 import { addToCart } from '../../../components/other/usefulFunctions';
 import LazyMedia from '../../../components/lazyMedia/LazyMedia';
+import { FaHeart } from 'react-icons/fa';
 
-export function FavoritesList({ items, togglePopup, user, removeItemFromFavorite }) {
+export function FavoritesList({ items, togglePopup, user, removeItemFromFavorite, hasFavorites, itemsLength, renderTitle }) {
   return (
     <div className={styles.grid}>
+      {renderTitle && (
+        <h1 className={styles.title}>
+          <FaHeart className={styles.icon} size={24} color="white" />
+          Mes Favoris
+        </h1>
+      )}
+      <p className={styles.subtitle}>
+        {hasFavorites
+          ? `${itemsLength} articles enregistrés`
+          : 'Aucun article enregistré'}
+      </p>
       {items.map((item, index) => (
         <Card key={index} className={styles.card}>
           <div className={styles.imageContainer}>
@@ -26,7 +38,7 @@ export function FavoritesList({ items, togglePopup, user, removeItemFromFavorite
               Ajouté le {new Date(item.createdAt).toLocaleDateString('fr-FR')}
             </p>
             
-            <Button handleClick={() => addToCart(user._id , togglePopup, item)} className={styles.addToCartButton}>
+            <Button onClick={() => addToCart(user._id , togglePopup, item)} className={styles.addToCartButton}>
               <Icon name="shopping_cart" className={styles.buttonIcon} />
               Ajouter au panier
             </Button>

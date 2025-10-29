@@ -44,19 +44,10 @@ export default function FavoritesPage() {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <header className={styles.header}>
-          <h1 className={styles.title}>
-            <FaHeart className={styles.icon} size={24} color="white" />
-            Mes Favoris
-          </h1>
-          <p className={styles.subtitle}>
-            {hasFavorites
-              ? `${items.length} articles enregistrés`
-              : 'Aucun article enregistré'}
-          </p>
         </header>
 
         {hasFavorites ? (
-          <FavoritesList removeItemFromFavorite={removeItemFromFavorite} user={user} togglePopup={togglePopup} items={items} />
+          <FavoritesList removeItemFromFavorite={removeItemFromFavorite} user={user} togglePopup={togglePopup} items={items} hasFavorites={hasFavorites} itemsLength={items.length} renderTitle={true} />
         ) : (
           <EmptyState />
         )}
