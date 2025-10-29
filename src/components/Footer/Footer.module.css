@@ -51,7 +51,7 @@
 
 .newsletter-button {
     position: absolute;
-    right: -30px;
+    right: 0px;
     top: 25%;
     transform: translateY(-50%);
     background: none;

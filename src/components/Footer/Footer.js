@@ -65,9 +65,7 @@ const Footer = () => {
                         <form onSubmit={handleSubmit} className={styles["newsletter-form"]}>
                             <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className={styles["newsletter-input"]} placeholder="Entrez votre adresse e-mail" />
                             <button type="submit" className={styles["newsletter-button"]}>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" />
-                                </svg>
+                                <img src="/images/icons/send.svg" alt="Send" width="24" height="24" />
                             </button>
                             <div className={styles["checkbox-container"]}>
                                 <input type="checkbox" id="privacy" />
