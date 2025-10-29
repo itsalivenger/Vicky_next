@@ -115,12 +115,28 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.passwordInputWrapper {
     position: relative;
+    width: 100%;
+}
+
+.passwordInputWrapper input {
+    padding: 15px 25px;
+    background: rgb(26, 26, 26);
+    color: #fff;
+    border: 1px solid var(--color-green);
+    border-radius: 15px;
+    margin: 15px 0px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border 0.3s ease-in-out;
 }
 
 .show-password{
     position: absolute;
-    top: 54px;
+    top: 50%;
     right: 10px;
     transform: translateY(-50%);
     transition: transform 0.3s ease;

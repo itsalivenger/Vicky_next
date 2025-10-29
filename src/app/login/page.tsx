@@ -71,12 +71,14 @@ function LoginPage() {
                             </div>
                             <div className={styles.inputContainer}>
                                 <label>Mot de passe <span>*</span></label>
-                                <input value={password} onChange={(e) => setPassword(e.target.value)} type={visibility ? "text" : "password"} placeholder="Mot de passe" required />
-                                {visibility ? (
-                                    <LazyMedia type={'image'} src="/images/icons/visibilityOff.svg" alt="hide password" onClick={() => setVisibility(!visibility)} className={styles["show-password"]} />
-                                ) : (
-                                    <LazyMedia type="image" src="/images/icons/visibility.svg" alt="show password" onClick={() => setVisibility(!visibility)} className={styles["show-password"]} />
-                                )}
+                                <div className={styles.passwordInputWrapper}>
+                                    <input value={password} onChange={(e) => setPassword(e.target.value)} type={visibility ? "text" : "password"} placeholder="Mot de passe" required />
+                                    {visibility ? (
+                                        <LazyMedia type={'image'} src="/images/icons/visibilityOff.svg" alt="hide password" onClick={() => setVisibility(!visibility)} className={styles["show-password"]} />
+                                    ) : (
+                                        <LazyMedia type="image" src="/images/icons/visibility.svg" alt="show password" onClick={() => setVisibility(!visibility)} className={styles["show-password"]} />
+                                    )}
+                                </div>
                             </div>
                         </div>
 

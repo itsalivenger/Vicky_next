@@ -7,8 +7,8 @@ export default function AboutHero() {
       <div className={styles.overlay} />
       <div className={styles.content}>
         <div className={styles.header}>
-          <h1>A Propos de Vicky</h1>
-          <LazyMedia type="image" src="/images/logos/HeatzLogo.png" alt="Vicky Logo" className={styles.logo} />
+          <h1>A Propos</h1>
+          <LazyMedia type="image" src="/images/logos/Vicky_no_bg.png" alt="Vicky Logo" className={styles.logo} />
         </div>
         <p>
           Alimentez votre style de vie numérique avec des accessoires électroniques haut de gamme. 

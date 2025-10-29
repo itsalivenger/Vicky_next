@@ -54,7 +54,7 @@ const Footer = () => {
                 <div className={styles["footer-top"]}>
                     <div className={styles["footer-brand"]}>
                         <div className={styles["logo"]}>
-                            <LazyMedia type="image" src="/images/logos/HeatzLogo.png" alt="Vicky" />
+                            <LazyMedia type="image" src="/images/logos/Vicky_no_bg.png" alt="Vicky" />
                         </div>
 
                         <SocialMedia />

@@ -35,6 +35,11 @@
   font-weight: bold;
 }
 
+.header img {
+  height: 6rem;
+  width: auto;
+}
+
 .content p {
   font-size: 1.125rem;
   line-height: 1.75;
