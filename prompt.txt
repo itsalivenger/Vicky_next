@@ -1,5 +1,3 @@
-Failed to compile.
-./src/app/signup/page.tsx:62:36
 Type error: Type 'Element' is not assignable to type 'string'.
   60 |
   61 |     if (!result.success) {
