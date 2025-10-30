@@ -93,7 +93,7 @@ function SignupPage() {
 
     } catch (error) {
       console.error("Signup failed:", error);
-      setContent({ title: "Error", content: error.message || "Failed to create account." });
+      setContent({ title: "Error", content: error instanceof Error ? error.message : "Failed to create account." });
       openPopup();
     }
   };

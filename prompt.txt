@@ -1,10 +1,11 @@
-Type error: Type 'Element' is not assignable to type 'string'.
-  60 |
-  61 |     if (!result.success) {
-> 62 |       setContent({ title: "Error", content: result.errors });
-     |                                    ^
-  63 |       setIsPopupOpen(true);
-  64 |       return;
-  65 |     }
+./src/app/signup/page.tsx:96:45
+Type error: 'error' is of type 'unknown'.
+  94 |     } catch (error) {
+  95 |       console.error("Signup failed:", error);
+> 96 |       setContent({ title: "Error", content: error.message || "Failed to create account." });
+     |                                             ^
+  97 |       openPopup();
+  98 |     }
+  99 |   };
 Next.js build worker exited with code: 1 and signal: null
 Error: Command "npm run build" exited with 1
