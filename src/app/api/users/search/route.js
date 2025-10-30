@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
-import { database } from '../../../../../components/other/variables';
+import { database } from '../../../../components/other/variables';
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);

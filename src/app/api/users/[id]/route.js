@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
 import { ObjectId } from 'mongodb';
-import { database } from '../../../../../components/other/variables';
+import { database } from '../../../../components/other/variables';
 
 export async function DELETE(req, { params }) {
   const { id } = params;
