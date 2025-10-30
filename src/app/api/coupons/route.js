@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../lib/server/connection';
+import { database } from '../../../components/other/variables';
 import { ObjectId } from 'mongodb';
 
 export async function GET() {
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const coupCollection = db.collection('Coupons');
 
     const coupons = await coupCollection.find().toArray();
@@ -20,7 +21,7 @@ export async function GET() {
 export async function POST(req) {
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const coupCollection = db.collection('Coupons');
 
     const coupon = await req.json();

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
 import { uploadToCloudinary } from '../../../../../lib/server/cloudinaryHelper';
+import { database } from '../../../../components/other/variables';
 
 export async function POST(req) {
   try {
@@ -30,7 +31,7 @@ export async function POST(req) {
     }
 
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const productsCollection = db.collection('Products');
 
     const existingProduct = await productsCollection.findOne({ productName });

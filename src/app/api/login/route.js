@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../lib/server/connection';
+import { database } from '../../../components/other/variables';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
@@ -12,7 +13,7 @@ export async function POST(req) {
 
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const usersCollection = db.collection('Users');
 
     const user = await usersCollection.findOne({ email });

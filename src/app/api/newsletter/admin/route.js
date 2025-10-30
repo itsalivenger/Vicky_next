@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
+import { database } from '../../../../components/other/variables';
 import sendEmail from '../../../../../lib/server/sendEmail';
 
 export async function POST(req) {
@@ -7,7 +8,7 @@ export async function POST(req) {
 
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const subscribersCollection = db.collection('Subscribers');
 
     const subscribers = await subscribersCollection.find().toArray();

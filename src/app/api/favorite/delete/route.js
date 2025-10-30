@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
+import { database } from '../../../../components/other/variables';
 import { ObjectId } from 'mongodb';
 
 export async function POST(req) {
@@ -15,7 +16,7 @@ export async function POST(req) {
     }
 
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const usersCollection = db.collection('Users');
 
     const user = await usersCollection.findOne({ _id: new ObjectId(user_id) });

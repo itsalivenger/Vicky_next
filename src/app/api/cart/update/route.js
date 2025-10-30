@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
+import { database } from '../../../../components/other/variables';
 import { ObjectId } from 'mongodb';
 
 export async function PUT(req) {
@@ -11,7 +12,7 @@ export async function PUT(req) {
 
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const usersCollection = db.collection('Users');
 
     const result = await usersCollection.updateOne(

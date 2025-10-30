@@ -2,8 +2,8 @@
 const localhostFront = 'http://localhost:3000';
 const localhostBack = 'http://localhost:5000';
 // deploy
-const clientDeploy = 'https://heatz.ma';
-const serverDeploy = 'https://heatz-server.vercel.app';
+const clientDeploy = 'https://Vicky.ma';
+const serverDeploy = 'https://Vicky-server.vercel.app';
 
 const domain = clientDeploy;
 const serverDomain = serverDeploy;
@@ -14,4 +14,6 @@ const contactInfo = {
     address: "Maroc - Casablanca"
 };
 
-export { domain, serverDomain, contactInfo };
+const database = 'Vicky'
+
+export { domain, serverDomain, contactInfo, database };

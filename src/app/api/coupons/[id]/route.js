@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
+import { database } from '../../../../components/other/variables';
 import { ObjectId } from 'mongodb';
 
 export async function PUT(req, { params }) {
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const coupCollection = db.collection('Coupons');
     const { id } = params;
     const { _id, ...updatedCoupon } = await req.json();

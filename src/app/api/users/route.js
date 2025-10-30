@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../lib/server/connection';
+import { database } from '../../../../components/other/variables';
 
 export async function GET() {
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const usersCollection = db.collection('Users');
     const users = await usersCollection.find().toArray();
     client.close();

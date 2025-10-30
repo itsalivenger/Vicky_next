@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
+import { database } from '../../../../components/other/variables';
 
 export async function POST(req) {
   const { searchVal } = await req.json();
@@ -10,7 +11,7 @@ export async function POST(req) {
 
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const productsCollection = db.collection('Products');
 
     const products = await productsCollection.find({

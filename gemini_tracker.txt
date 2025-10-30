@@ -1,12 +1,45 @@
-C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\about\components\AboutHero\AboutHero.js
-C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\about\components\AboutTestimonials\AboutTestimonials.js
-- Replaced "Les produits Heatz ont complètement transformé mon expérience de charge. La qualité de fabrication et la fiabilité sont inégalées." with "Les produits Vicky ont complètement transformé mon expérience de charge. La qualité de fabrication et la fiabilité sont inégalées."
-- Replaced "En tant que photographe, des accessoires fiables sont essentiels. Heatz offre l'excellence à chaque fois." with "En tant que photographe, des accessoires fiables sont essentiels. Vicky offre l'excellence à chaque fois."
-- Replaced "Les capacités de charge rapide des produits Heatz ont révolutionné mon flux de travail mobile." with "Les capacités de charge rapide des produits Vicky ont révolutionné mon flux de travail mobile."
-C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\privacyPolicy\page.tsx
-- Replaced "Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Heatz." with "Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Vicky."
-- Replaced displayed text "Heatz.com" with "Vicky.com" in the website reference.
-- Replaced email address "contact@heatz.ma" with "contact@vicky.ma".
-- Replaced displayed text "Heatz.com" with "Vicky.com" in the website contact reference.
-C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\success\page.tsx
-- Replaced alt="Company Logo" with alt="Vicky Logo".
+Task Context: Change the database connection from hardcoded 'Vicky' (or 'Heatz') to use the 'database' variable exported from 'src/components/other/variables.js' in all API routes.
+
+--- Progress ---
+- src/app/api/adminDashboard/route.js: Updated to use `client.db(database)`.
+- src/app/api/cart/[user_id]/route.js: Updated to use `client.db(database)`.
+- src/app/api/cart/route.js: Updated to use `client.db(database)`.
+- src/app/api/cart/update/route.js: Updated to use `client.db(database)`.
+- src/app/api/checkout/route.js: Updated to use `client.db(database)`.
+- src/app/api/contact/route.js: No database connection found, no changes made.
+- src/app/api/contactSociete/route.js: No database connection found, no changes made.
+- src/app/api/coupons/[id]/delete/route.js: Updated to use `client.db(database)`.
+- src/app/api/coupons/[id]/route.js: Updated to use `client.db(database)`.
+- src/app/api/coupons/apply/route.js: Updated to use `client.db(database)`.
+- src/app/api/coupons/route.js: Updated to use `client.db(database)`.
+- src/app/api/favorite/[user_id]/route.js: Updated to use `client.db(database)`.
+- src/app/api/favorite/delete/route.js: Updated to use `client.db(database)`.
+- src/app/api/favorite/route.js: Updated to use `client.db(database)`.
+- src/app/api/favorite/update/route.js: Updated to use `client.db(database)`.
+- src/app/api/login/route.js: Updated to use `client.db(database)`.
+- src/app/api/newsletter/admin/route.js: Updated to use `client.db(database)`.
+- src/app/api/newsletter/route.js: Fixed syntax error and updated to use `client.db(database)`.
+- src/app/api/orders/[id]/route.js: Updated to use `client.db(database)`.
+- src/app/api/orders/search/route.js: Updated to use `client.db(database)`.
+- src/app/api/orders/route.js: Updated to use `client.db(database)`.
+- src/app/api/orders/status/[id]/route.js: Updated to use `client.db(database)`.
+- src/app/api/orders/user/[user_id]/route.js: Updated to use `client.db(database)`.
+- src/app/api/products/add/route.js: Updated to use `client.db(database)`.
+- src/app/api/products/adminTable/route.js: Updated to use `client.db(database)`.
+- src/app/api/products/carouselSamples/route.js: Updated to use `client.db(database)`.
+- src/app/api/products/get/[name]/route.js: Updated to use `client.db(database)`.
+- src/app/api/products/search/route.js: Updated to use `client.db(database)`.
+- src/app/api/products/toggleActive/[id]/route.js: Updated to use `client.db(database)`.
+- src/app/api/products/update/route.js: Updated to use `client.db(database)`.
+- src/app/api/resetpass/route.js: Updated to use `client.db(database)`.
+- src/app/api/signup/route.js: Updated to use `client.db(database)`.
+- src/app/api/users/route.js: Updated to use `client.db(database)`.
+- src/app/api/users/[id]/route.js: Updated to use `client.db(database)`.
+- src/app/api/users/search/route.js: Updated to use `client.db(database)`.
+
+Task completed.
+
+Task Context: Fix the "Error [object object]" popup on the signup page.
+
+--- Progress ---
+- src/app/signup/page.tsx: Modified to correctly display validation errors (JSX) and extract specific error messages from catch blocks.

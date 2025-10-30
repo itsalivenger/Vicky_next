@@ -1,12 +1,7 @@
-I have been tasked to replace all occurrences of the text "heatz" with "Vicky" in all files within the `src/components` and `src/app` directories. I need to be careful to only replace constant strings that are meant to be displayed, and not to replace meta text such as `src` values for images, or other tag values. I am tracking my progress in `gemini_tracker.txt`.
-
-So far, I have processed the following files and made replacements:
-- `C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\components\other\variables.js` (email address)
-- `C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\components\location\location.js` (iframe title)
-- `C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\components\adminSideNav\adminSideNav.js` (LazyMedia alt text)
-- `C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\components\Nav\Navbar.js` (img alt text)
-- `C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\components\Footer\Footer.js` (LazyMedia alt text, paragraph text, copyright notice)
-- `C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\layout.tsx` (title tag, og:title, twitter:title)
-- `C:\Users\aliho\Desktop\projects\Vicky\Vicky_next\src\app\about\components\AboutFeatures\AboutFeatures.js` (h2 subtitle)
-
-I will now continue processing the remaining files in `src/app`.
+Error during login: [Error: querySrv ETIMEOUT _mongodb._tcp.clientsali.dfld8.mongodb.net] {
+  errno: undefined,
+  code: 'ETIMEOUT',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.clientsali.dfld8.mongodb.net'
+}
+ POST /api/login 500 in 56585ms

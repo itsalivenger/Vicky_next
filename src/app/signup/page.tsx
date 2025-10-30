@@ -59,7 +59,7 @@ function SignupPage() {
     const result = formValidation({ email, password, phoneNumber })
 
     if (!result.success) {
-      setContent({ title: "Error", content: String(result.errors) });
+      setContent({ title: "Error", content: result.errors });
       setIsPopupOpen(true);
       return;
     }
@@ -93,7 +93,7 @@ function SignupPage() {
 
     } catch (error) {
       console.error("Signup failed:", error);
-      setContent({ title: "Error", content: "Failed to create account." });
+      setContent({ title: "Error", content: error.message || "Failed to create account." });
       openPopup();
     }
   };

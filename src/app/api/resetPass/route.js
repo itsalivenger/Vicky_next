@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../lib/server/connection';
 import sendEmail from '../../../../lib/server/sendEmail';
 import crypto from 'crypto';
+import { database } from '../../../components/other/variables';
 
 export async function POST(req) {
   const { email, domain } = await req.json();
@@ -12,7 +13,7 @@ export async function POST(req) {
 
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const usersCollection = db.collection('Users');
 
     const user = await usersCollection.findOne({ email });

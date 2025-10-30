@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { connectToDb } from '../../../../../lib/server/connection';
 import { ObjectId } from 'mongodb';
+import { database } from '../../../../components/other/variables';
 
 export async function PUT(req) {
   const { updatedData, _id: productId } = await req.json();
@@ -17,7 +18,7 @@ export async function PUT(req) {
 
   try {
     const client = await connectToDb();
-    const db = client.db('Heatz');
+    const db = client.db(database);
     const productsCollection = db.collection('Products');
 
     const result = await productsCollection.updateOne(
