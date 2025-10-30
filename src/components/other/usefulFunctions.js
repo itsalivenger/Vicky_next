@@ -108,13 +108,7 @@ function formValidation(formData) {
     // Return results
     return {
         success: errors.length === 0,
-        errors: (
-            <ul>
-                {errors.map((error, index) => (
-                    <li key={index}>{error}</li>
-                ))}
-            </ul>
-        ),
+        errors: errors,
     };
 }
 

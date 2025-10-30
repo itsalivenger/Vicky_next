@@ -59,7 +59,7 @@ function SignupPage() {
     const result = formValidation({ email, password, phoneNumber })
 
     if (!result.success) {
-      setContent({ title: "Error", content: result.errors });
+      setContent({ title: "Error", content: result.errors.join('\n') });
       setIsPopupOpen(true);
       return;
     }

@@ -1,7 +1,12 @@
-Error during login: [Error: querySrv ETIMEOUT _mongodb._tcp.clientsali.dfld8.mongodb.net] {
-  errno: undefined,
-  code: 'ETIMEOUT',
-  syscall: 'querySrv',
-  hostname: '_mongodb._tcp.clientsali.dfld8.mongodb.net'
-}
- POST /api/login 500 in 56585ms
+Failed to compile.
+./src/app/signup/page.tsx:62:36
+Type error: Type 'Element' is not assignable to type 'string'.
+  60 |
+  61 |     if (!result.success) {
+> 62 |       setContent({ title: "Error", content: result.errors });
+     |                                    ^
+  63 |       setIsPopupOpen(true);
+  64 |       return;
+  65 |     }
+Next.js build worker exited with code: 1 and signal: null
+Error: Command "npm run build" exited with 1
